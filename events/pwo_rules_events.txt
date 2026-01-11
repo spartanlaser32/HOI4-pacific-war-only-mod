@@ -1,0 +1,5 @@
+add_namespace = pwo_rules_events
+
+country_event = {
+	
+}

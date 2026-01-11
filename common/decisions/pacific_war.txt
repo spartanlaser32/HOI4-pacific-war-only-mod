@@ -1,0 +1,141 @@
+
+pacific_war_decisions = {
+
+	debug_move_to_the_left = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = pacific_war_balance
+				value = -0.05
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+	}
+
+	debug_move_to_the_right = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = pacific_war_balance
+				value = 0.05
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+	debug_add_big_left_mod = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = pacific_war_balance
+				modifier = pwo_bop_modifier_debug_big_left
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+	debug_add_small_left_mod = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = pacific_war_balance
+				modifier = pwo_bop_modifier_debug_small_left
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+	debug_add_big_right_mod = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = pacific_war_balance
+				modifier = pwo_bop_modifier_debug_big_right
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+	debug_add_small_right_mod = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_modifier = {
+				id = pacific_war_balance
+				modifier = pwo_bop_modifier_debug_small_right
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+	debug_remove_all_modifiers = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			remove_all_power_balance_modifiers = {
+				id = pacific_war_balance
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+
+	debug_move_to_the_right = {
+		available = {
+			#always = yes
+			is_debug = yes
+		}
+
+		complete_effect = {
+			add_power_balance_value = {
+				id = pacific_war_balance
+				value = 0.05
+			}
+		}
+		ai_will_do = {
+			base = -999
+		}
+	}
+
+
+
+
+
+
+}
+
+	

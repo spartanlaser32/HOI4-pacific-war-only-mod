@@ -1,0 +1,21 @@
+pwo_war_in_europe_balancer = {
+	name = "RULE_EUROPE_BALANCER"
+	group = "RULE_PWO_GROUP"
+	icon = "GFX_wargoals"
+	option = {
+		name = "NONE"
+		text = "RULE_OPTION_NONE"
+		desc = "RULE_EUROPE_BALANCER_NONE_DESC"
+	}
+	default = {
+		name = "NATIONAL_SPIRIT"
+		text = "RULE_OPTION_NATIONAL_SPIRIT"
+		desc = "RULE_EUROPE_BALANCER_NATIONAL_SPIRIT_DESC"
+	}
+	option = {
+		name = "BALANCE_OF_POWER"
+		text = "RULE_OPTION_BALANCE_OF_POWER"
+		desc = "RULE_EUROPE_BALANCER_BALANCE_OF_POWER_DESC"
+	}
+
+}

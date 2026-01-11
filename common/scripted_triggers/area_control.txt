@@ -1,0 +1,180 @@
+
+controls_malaysia = {
+	OR = {
+		controls_state = 336
+		any_allied_country = {
+			controls_state = 336
+		}
+	}
+}
+
+controls_burma = {
+	count_triggers = {
+		amount = 3
+		OR = {
+			controls_state = 288
+			any_allied_country = {
+				controls_state = 288
+			}
+		}
+		OR = {
+			controls_state = 640
+			any_allied_country = {
+				controls_state = 640
+			}
+		}
+		OR = {
+			controls_state = 999
+			any_allied_country = {
+				controls_state = 999
+			}
+		}
+		OR = {
+			controls_state = 434
+			any_allied_country = {
+				controls_state = 434
+			}
+		}
+	}
+}
+
+controls_burma = {
+	count_triggers = {
+		amount = 3
+		OR = {
+			controls_state = 288
+			any_allied_country = {
+				controls_state = 288
+			}
+		}
+		OR = {
+			controls_state = 640
+			any_allied_country = {
+				controls_state = 640
+			}
+		}
+		OR = {
+			controls_state = 999
+			any_allied_country = {
+				controls_state = 999
+			}
+		}
+		OR = {
+			controls_state = 434
+			any_allied_country = {
+				controls_state = 434
+			}
+		}
+	}
+}
+
+controls_borneo = {
+	AND = {
+		OR = {
+			controls_state = 334
+			any_allied_country = {
+				controls_state = 334
+			}
+		}
+		OR = {
+			controls_state = 333
+			any_allied_country = {
+				controls_state = 333
+			}
+		}
+		OR = {
+			controls_state = 1023
+			any_allied_country = {
+				controls_state = 1023
+			}
+		}
+		OR = {
+			controls_state = 1024
+			any_allied_country = {
+				controls_state = 1024
+			}
+		}
+	}
+}
+
+controls_sumatra = {
+	OR = {
+		controls_state = 672
+		any_allied_country = {
+			controls_state = 672
+		}
+	}
+}
+
+controls_java = {
+	AND = {
+		OR = {
+			controls_state = 335
+			any_allied_country = {
+				controls_state = 335
+			}
+		}
+		OR = {
+			controls_state = 667
+			any_allied_country = {
+				controls_state = 667
+			}
+		}
+	}
+
+}
+
+#ALLIES
+
+controls_guangdong= {
+	AND = {
+		OR = {
+			controls_state = 599
+			any_allied_country = {
+				controls_state = 599
+			}
+		}
+		OR = {
+			controls_state = 593
+			any_allied_country = {
+				controls_state = 593
+			}
+		}
+		OR = {
+			controls_state = 594
+			any_allied_country = {
+				controls_state = 594
+			}
+		}
+		OR = {
+			controls_state = 592
+			any_allied_country = {
+				controls_state = 592
+			}
+		}
+	}
+
+}
+
+controls_indochina= {
+	AND = {
+		OR = {
+			controls_state = 724
+			any_allied_country = {
+				controls_state = 724
+			}
+		}
+		OR = {
+			controls_state = 286
+			any_allied_country = {
+				controls_state = 286
+			}
+		}
+		OR = {
+			controls_state = 671
+			any_allied_country = {
+				controls_state = 671
+			}
+		}
+	}
+}

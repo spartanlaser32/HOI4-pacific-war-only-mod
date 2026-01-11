@@ -1,0 +1,489 @@
+shared_focus = {
+	id  = ALL_we_will_fight
+	icon = GFX_faction_logo_generic_12
+
+	x = 0
+	y = 0
+
+	cost = 10
+
+	offset = {
+		x = 34
+		y = 8
+
+		trigger = {
+			tag = PHI
+		}
+	}
+
+	offset = {
+		x = 14
+		y = 6
+
+		trigger = {
+			tag = NZL
+		}
+	}
+
+	offset = {
+		x = 14
+		y = 6
+
+		trigger = {
+			tag = AST
+		}
+	}
+
+	offset = {
+		x = 19
+		y = 7
+		trigger = {
+			tag = CAN
+		}
+	}
+	offset = {
+		x = 35
+		y = 0
+		trigger = {
+			tag = MEX
+		}
+	}
+	offset = {
+		x = 20
+		y = 10
+		trigger = {
+			tag = BRA
+		}
+	}
+
+
+	bypass = {
+
+	}
+
+	completion_reward = {
+		
+	}
+
+
+
+}
+
+
+
+shared_focus = {
+	id = ALL_on_the_beaches
+	icon = GFX_focus_ARG_cut_ties_with_britain
+
+	prerequisite = { focus = ALL_we_will_fight }
+
+	relative_position_id = ALL_we_will_fight
+
+	x = 0 
+	y = 1
+
+	cost = 10 
+	mutually_exclusive = {
+		focus = ALL_in_the_mountains
+		focus = ALL_in_the_trees
+		focus = ALL_from_the_sky
+		focus = ALL_from_everywhere_all_at_once	
+	}
+	completion_reward = {
+		navy_experience = 50
+		add_tech_bonus = {
+			name = ALL_on_the_beaches
+			bonus = 1
+			uses = 3
+			category = marines_tech_cat
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_in_the_mountains
+	icon = GFX_focus_ARG_cut_ties_with_britain
+
+	prerequisite = { focus = ALL_we_will_fight }
+
+	relative_position_id = ALL_we_will_fight
+
+	x = -2 
+	y = 1
+
+	mutually_exclusive = {
+		focus = ALL_in_the_trees
+		focus = ALL_from_the_sky
+		focus = ALL_on_the_beaches
+		focus = ALL_from_everywhere_all_at_once	
+	}
+	cost = 10 
+
+	custom_effect_tooltip = ALL_mountaineers_tt
+
+	completion_reward = {
+		army_experience = 50
+		add_tech_bonus = {
+			name = ALL_in_the_mountains
+			bonus = 1
+			uses = 3
+			category = mountaineers_tech_cat
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_in_the_trees
+	icon = GFX_focus_ARG_cut_ties_with_britain
+
+	prerequisite = { focus = ALL_we_will_fight }
+
+	relative_position_id = ALL_we_will_fight
+
+	x = -4
+	y = 1
+	mutually_exclusive = {
+		focus = ALL_in_the_mountains
+		focus = ALL_from_the_sky
+		focus = ALL_on_the_beaches
+		focus = ALL_from_everywhere_all_at_once	
+	}
+	cost = 10 
+
+	custom_effect_tooltip = ALL_rangers_tt
+
+	completion_reward = {
+		army_experience = 50
+		add_tech_bonus = {
+			name = ALL_in_the_trees
+			bonus = 1
+			uses = 3
+			category = rangers_tech_cat
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_from_the_sky
+	icon = GFX_focus_ARG_cut_ties_with_britain
+
+	prerequisite = { focus = ALL_we_will_fight }
+
+	relative_position_id = ALL_we_will_fight
+
+	x = 2
+	y = 1
+	mutually_exclusive = {
+		focus = ALL_in_the_mountains
+		focus = ALL_in_the_trees
+		focus = ALL_on_the_beaches
+		focus = ALL_from_everywhere_all_at_once	
+	}
+	cost = 10 
+
+	completion_reward = {
+		air_experience = 50
+		add_tech_bonus = {
+			name = ALL_from_the_sky
+			bonus = 1
+			uses = 3
+			category = paratroopers_tech_cat
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_from_everywhere_all_at_once
+	icon = GFX_focus_ARG_cut_ties_with_britain
+
+	prerequisite = { focus = ALL_we_will_fight }
+
+	relative_position_id = ALL_we_will_fight
+
+	mutually_exclusive = {
+		focus = ALL_in_the_mountains
+		focus = ALL_in_the_trees
+		focus = ALL_from_the_sky
+		focus = ALL_on_the_beaches
+	}
+
+	x = 4
+	y = 1
+
+	cost = 10 
+
+	completion_reward = {
+		add_potential_special_forces_tree = 3
+		army_experience = 50
+		navy_experience = 25
+		air_experience = 25
+		add_tech_bonus = {
+			name = ALL_from_everywhere_all_at_once
+			bonus = 1
+			uses = 1
+			category = rangers_tech_cat
+		}
+		add_tech_bonus = {
+			name = ALL_from_everywhere_all_at_once
+			bonus = 1
+			uses = 1
+			category = mountaineers_tech_cat
+		}
+		add_tech_bonus = {
+			name = ALL_from_everywhere_all_at_once
+			bonus = 1
+			uses = 1
+			category = marines_tech_cat
+		}
+		add_tech_bonus = {
+			name = ALL_from_everywhere_all_at_once
+			bonus = 1
+			uses = 1
+			category = paratroopers_tech_cat
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_the_trucks_that_you_rode_in_on
+	icon = GFX_focus_ARG_establish_the_free_association
+
+	prerequisite = { focus = ALL_in_the_mountains focus = ALL_in_the_trees }
+	relative_position_id =  ALL_in_the_mountains
+	x = -1
+	y = 1
+
+	cost = 10
+
+	completion_reward = {
+		add_equipment_bonus = {
+			bonus = {
+				truck_equipment = {
+					instant = yes
+					build_cost_ic = -0.5
+				}
+
+			}
+		}
+	}
+	
+}
+
+shared_focus = {
+	id = ALL_holding_the_line
+	icon = GFX_focus_ARG_establish_the_free_association
+
+	prerequisite = { focus = ALL_the_trucks_that_you_rode_in_on }
+	relative_position_id =  ALL_the_trucks_that_you_rode_in_on
+	x = 0
+	y = 1
+
+	cost = 10
+
+	completion_reward = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = ALL_in_the_mountains
+				}
+				
+			}
+			add_unit_bonus = {
+				ranger = {
+					defense = 0.15
+					entrenchment = 1
+				}
+			}
+		} 
+		else = {
+			add_unit_bonus = {
+				mountaineer = {
+					defense = 0.15
+					entrenchment = 1
+				}
+			}
+		}
+	}
+	
+}
+
+
+
+
+
+shared_focus = {
+	id = ALL_the_boats_you_sailed_in_on
+	icon = GFX_focus_ARG_defense_and_democracy
+
+	prerequisite = { focus = ALL_on_the_beaches }
+	relative_position_id = ALL_on_the_beaches
+
+	x = 0 
+	y = 1
+
+	cost = 10
+
+
+	completion_reward = {
+		add_equipment_bonus = {
+			bonus = {
+				convoy = {
+					instant = yes
+					build_cost_ic = -0.5
+				}
+			}
+			
+		}
+	}
+
+}
+
+
+shared_focus = {
+	id = ALL_superior_weaponry
+	icon = GFX_focus_ARG_establish_the_free_association
+
+	prerequisite = { focus = ALL_the_boats_you_sailed_in_on }
+	cost = 10
+	relative_position_id = ALL_the_boats_you_sailed_in_on
+	x = -1
+	y = 1
+	mutually_exclusive = { focus = ALL_optimized_logistics }
+
+	completion_reward = {
+		add_unit_bonus = {
+			bonus = {
+				marines = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.1
+					ap = 0.1
+				}
+				marine_commando = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					breakthrough = 0.1
+					ap = 0.1
+				}
+
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_optimized_logistics
+	icon = GFX_focus_ARG_no_gods_no_masters
+	prerequisite = { focus = ALL_the_boats_you_sailed_in_on }
+	cost = 10
+	relative_position_id = ALL_the_boats_you_sailed_in_on
+	x = 1
+	y = 1
+
+	mutually_exclusive = { focus = ALL_superior_weaponry }
+
+	completion_reward = {
+		add_unit_bonus = {
+			bonus = {
+				marines = {
+					supply_consumption = -0.2
+				}
+				marine_commando = {
+					supply_consumption = -0.2
+				}
+
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_extra_rations 
+	icon = GFX_focus_AFG_contact_amanullah_loyalists_alt
+	prerequisite = { focus = ALL_superior_weaponry focus = ALL_optimized_logistics }
+	cost = 10
+	relative_position_id = ALL_superior_weaponry
+	x = 0
+	y = 1
+	mutually_exclusive = { focus = ALL_lighter_transports }
+	completion_reward = {
+		add_unit_bonus = {
+			bonus = {
+				marines = {
+					no_supply_grace = 48
+				}
+				marine_commando = {
+					no_supply_grace = 48
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_lighter_transports
+	icon = GFX_focus_AFG_contact_amanullah_loyalists_alt
+	prerequisite = { focus = ALL_superior_weaponry focus = ALL_optimized_logistics }
+	cost = 10
+	relative_position_id = ALL_optimized_logistics
+	x = 0
+	y = 1
+	mutually_exclusive = { focus = ALL_extra_rations }
+
+	completion_reward = {
+		add_unit_bonus = {
+			bonus = {
+				marines = {
+					amphibious_invasion = 0.5
+				}
+				marine_commando = {
+					amphibious_invasion = 0.5
+				}
+			}
+		}
+	}
+}
+
+
+
+
+shared_focus = {
+	id = ALL_the_planes_you_flew_in_on
+	icon = GFX_focus_AFG_mountain_training
+	prerequisite = { focus = ALL_from_the_sky }
+	cost = 10
+	relative_position_id = ALL_from_the_sky
+	x = 0
+	y = 1
+
+	completion_reward = {
+		add_equipment_bonus = {
+			bonus = { 
+				transport_plane = {
+					instant = yes
+					build_cost_ic = -0.5
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = ALL_lighter_equipment
+	icon = GFX_focus_ARG_cut_ties_with_britain
+	cost = 5
+	prerequisite = { focus = ALL_the_planes_you_flew_in_on }
+	relative_position_id = ALL_the_planes_you_flew_in_on
+	x = 0
+	y = 1
+
+	completion_reward = {
+		add_unit_bonus = {
+			bonus = {
+				paratroopers = {
+
+				}
+			}
+		}
+	}
+}

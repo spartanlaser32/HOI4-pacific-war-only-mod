@@ -1,0 +1,226 @@
+mountain_artillery = {
+    track = mountaineer
+    name = SUBDOCTRINE_MOUNTAIN_ARTILLERY
+    description = SUBDOCTRINE_MOBILE_INFANTRY_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+    enable_tactic = tactic_overwhelming_fire
+    effect = {
+        enable_subunits = {
+            rangers_support
+        }	
+    }	
+
+    rewards = {
+        cavalry_charge = {
+            artillery_brigade = {
+                combat_width = -0.2
+            }
+        }
+        combined_arms_planning = {
+            artillery = {
+                battalion_mult = {
+                    category = category_mountaineers
+                    soft_attack = 0.10
+                    breakthrough = 0.05
+                }
+            }
+        }
+        decisive_operations = {
+            artillery_brigade = {
+                mountain = {
+                    attack = 0.2
+                }
+                hill = {
+                    attack = 0.2
+                }
+            }
+        }
+        delegated_authority = {
+            rangers_support = {
+                battalion_mult = {
+                    category = category_line_artillery
+                    add = yes
+                    max_organisation = 3
+                }
+            }
+        }
+        maneuver_warfare = {
+            category_mountaineers = {
+                max_organisation = 20
+            }
+        }
+
+    }
+}
+
+
+mountaineer_left_side = {
+    track = mountaineer
+    name = SUBDOCTRINE_MOUNTAIN_LEFT_SIDE
+    description = SUBDOCTRINE_MOBILE_INFANTRY_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+    category_mountaineers = {
+        supply_consumption = -0.02
+    }
+    category_special_forces = {
+        max_organisation = 5
+        soft_attack = 0.05
+    }
+    effect = {
+        enable_subunits = {
+            rangers_support
+        }	
+    }	
+
+    # EFFECTS
+    #enable_tactic = tactic_overwhelming_fire
+
+    rewards = {
+        cavalry_charge = {
+            rangers_support = {
+                acclimatization_cold_climate_gain_factor = 0.25
+                snow = {
+                    attack = 0.15
+                    defence = 0.20
+                    movement = 0.15
+                }
+            }
+        }
+        combined_arms_planning = {
+            category_mountaineers = {
+                initiative = 0.01
+            }
+            unit_mountaineers_design_cost_factor = -0.50
+            unit_rangers_support_design_cost_factor = -0.50
+            
+        }
+        decisive_operations = {
+            category_mountaineers = {
+                defense = 0.10
+            }
+            mountaineers = {
+                combat_width = -0.2
+            }
+        }
+        delegated_authority = {
+            category_mountaineers = {
+                max_organisation = 10
+            }
+        }
+        maneuver_warfare = {
+            category_mountaineers = {
+                soft_attack = 0.10
+            }
+            
+            mountaineers_special_forces_contribution_factor = -0.25
+            special_forces_training_time_factor = -0.20
+        }
+
+    }
+}
+
+mountaineer_right_side = {
+    track = mountaineer
+    name = SUBDOCTRINE_MOUNTAIN_RIGHT_SIDE
+    description = SUBDOCTRINE_MOBILE_INFANTRY_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+    category_mountaineers = {
+        supply_consumption = -0.02
+    }
+    category_special_forces = {
+        max_organisation = 5
+        soft_attack = 0.05
+    }
+    enable_subunits = {
+        rangers_support
+    }		
+
+    # EFFECTS
+    #enable_tactic = tactic_overwhelming_fire
+
+    rewards = {
+        cavalry_charge = {
+            rangers_support = {
+                mountain = {
+                    attack = 0.20
+                    defence = 0.10
+                    movement = 0.10
+                }
+            }
+        }
+        combined_arms_planning = {
+            category_mountaineers = {
+                initiative = 0.01
+            }
+            unit_mountaineers_design_cost_factor = -0.50
+            unit_rangers_support_design_cost_factor = -0.50
+            
+        }
+        decisive_operations = {
+            artillery = {
+                battalion_mult = {
+                    category = category_mountaineers
+                    breakthrough = 0.15
+                }
+            }
+            
+            rangers_support = {
+                battalion_mult = {
+                    category = category_line_artillery
+                    soft_attack = 0.20
+                }
+            }
+        }
+        delegated_authority = {
+            category_mountaineers = {
+                max_organisation = 10
+            }
+        }
+        maneuver_warfare = {
+            special_forces_cap = 0.06
+            special_forces_out_of_supply_factor = -0.1
+            special_forces_attack_factor = 0.10
+            acclimatization_hot_climate_gain_factor = 0.10
+            acclimatization_cold_climate_gain_factor = 0.10
+        }
+
+    }
+}

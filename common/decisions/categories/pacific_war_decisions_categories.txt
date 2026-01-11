@@ -1,0 +1,56 @@
+pacific_war_bop_decisions = {
+	icon = generic_research
+
+	on_map_area = {
+		state = 336
+		name = control_malaysia
+		zoom = 500
+	}
+	on_map_area = {
+		state = 672
+		name = control_sumatra
+		zoom = 500
+	}
+	on_map_area = {
+		targets = { 335 667 }
+		name = control_java
+		zoom = 500
+	}
+	on_map_area = {
+		targets = { 288 640 999 434 }
+		name = control_burma_3_of_4_needed
+		zoom = 500
+	}
+	on_map_area = {
+		targets = { 334 333 1023 1024 }
+		name = control_borneo
+		zoom = 500
+	}
+	on_map_area = {
+		targets = { 599 593 594 592 }
+		name = control_guangdong
+		zoom = 500
+	}
+	on_map_area = {
+		targets = { 724 286 671 }
+		name = control_indochina
+		zoom = 500
+	}
+}
+
+pacific_war_decisions = {
+	priority = {
+		base = 1000
+	}
+	visible = {
+		has_game_rule = {
+			rule = pwo_war_in_europe_balancer
+			option = BALANCE_OF_POWER
+		}
+	}
+	icon = generic_research
+	scripted_gui = pwo_war_in_europe_decision_ui
+}
+pwo_decisions = {
+	icon = generic_research
+}

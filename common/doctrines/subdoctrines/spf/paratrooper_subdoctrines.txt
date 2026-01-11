@@ -1,0 +1,179 @@
+air_support = {
+    track = paratrooper
+    name = SUBDOCTRINE_AIR_SUPPORT
+    description = SUBDOCTRINE_AIR_SUPPORT_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = air
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+    effect = {
+    }
+
+    rewards = {
+        cavalry_charge = {
+			paratrooper_organization_factor = 0.2
+        }
+        combined_arms_planning = {
+            army_bonus_air_superiority_factor = 0.15
+        }
+        decisive_operations = {
+            air_close_air_support_org_damage_factor = 0.1
+        }
+        delegated_authority = {
+            air_cas_efficiency = 0.2
+        }
+        maneuver_warfare = {
+            air_cas_present_factor = 0.2
+        }
+
+    }
+}
+paratrooper_left_side = {
+    track = paratrooper
+    name = SUBDOCTRINE_PARATROOPER_LEFT_SIDE
+    description = SUBDOCTRINE_AIR_SUPPORT_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = air
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+	paratroopers_special_forces_contribution_factor = -0.10
+	transport_plane = {
+		air_defence = 0.20
+	}
+	category_special_forces = {
+		max_organisation = 5
+		soft_attack = 0.05
+	}
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+    effect = {
+    }
+
+    rewards = {
+        cavalry_charge = {
+			paratroopers_special_forces_contribution_factor = -0.10
+		
+			effect = {
+				custom_effect_tooltip = SF_PARAS_sabotage_effect_tt
+			}
+        }
+        combined_arms_planning = {
+			effect = {
+				enable_subunits = {
+					airborne_light_armor
+				}
+			}
+        }
+        decisive_operations = {
+            signal_company = {
+				battalion_mult = {
+					category = category_paratroopers
+					defense = 0.15
+				}
+			}
+        }
+        delegated_authority = {
+			category_paratroopers = {
+				max_organisation = 5
+				supply_consumption = -0.02
+			}
+            acclimatization_hot_climate_gain_factor = 0.10
+			acclimatization_cold_climate_gain_factor = 0.10
+        }
+        maneuver_warfare = {
+            category_paratroopers = {
+				soft_attack = 0.15
+				breakthrough = 0.15
+			}
+			
+			special_forces_training_time_factor = 0.20
+        }
+    }
+}
+paratrooper_right_side = {
+    track = paratrooper
+    name = SUBDOCTRINE_PARATROOPER_RIGHT_SIDE
+    description = SUBDOCTRINE_AIR_SUPPORT_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = air
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+	paratroopers_special_forces_contribution_factor = -0.10
+	transport_plane = {
+		air_defence = 0.20
+	}
+	category_special_forces = {
+		max_organisation = 5
+		soft_attack = 0.05
+	}
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+    effect = {
+    }
+
+    rewards = {
+        cavalry_charge = {
+			paratroopers_special_forces_contribution_factor = -0.10
+		
+			effect = {
+				custom_effect_tooltip = SF_PARAS_combat_effect_tt
+			}
+        }
+        combined_arms_planning = {
+			effect ={
+				enable_subunits = {
+					airborne_light_armor
+				}
+			}
+        }
+        decisive_operations = {
+            field_hospital = {
+				battalion_mult = {
+					category = category_paratroopers
+					default_morale = 0.15
+				}
+			}
+        }
+        delegated_authority = {
+			paratrooper_weight_factor = -0.5
+			special_forces_no_supply_grace = 24
+        }
+        maneuver_warfare = {
+            paratroopers_special_forces_contribution_factor = -0.20
+			special_forces_training_time_factor = -0.10
+			special_forces_attack_factor = 0.10
+        }
+    }
+}

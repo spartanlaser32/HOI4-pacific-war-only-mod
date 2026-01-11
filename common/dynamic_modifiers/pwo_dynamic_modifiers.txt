@@ -1,0 +1,10 @@
+USA_economy_dynamic_modifier = {
+	enable = { always = yes}
+	icon = GFX_idea_ETH_army_1
+
+	political_power_cost = -1
+	consumer_goods_factor = 0.60
+	conscription_factor = -0.5
+	join_faction_tension = 0.20
+	local_resources_factor = -0.2
+}

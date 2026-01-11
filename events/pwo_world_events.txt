@@ -1,0 +1,204 @@
+add_namespace = pwo_world_events
+
+country_event = { #RHINELAND
+	id = pwo_world_events.1
+	title =  pwo_world_events.1.t
+	desc = pwo_world_events.1.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		add_named_threat = { threat = 5 name = GER_rhineland }
+	}
+
+	option = {
+		name = pwo_world_events.1.a
+	}
+}
+country_event = { #SUDETENLAND
+	id = pwo_world_events.2
+	title =  pwo_world_events.2.t
+	desc = pwo_world_events.2.d
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		add_named_threat = { threat = 4 name = GER_demand_sudetenland_threat }
+	}
+
+	option = {
+		name = pwo_world_events.2.a
+	}
+}
+country_event = { #FATE OF THE CZECHS
+	id = pwo_world_events.3
+	title =  pwo_world_events.3.t
+	desc = pwo_world_events.3.d
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
+	}
+
+	option = {
+		name = pwo_world_events.3.a
+	}
+}
+country_event = { #MEMEL
+	id = pwo_world_events.4
+	title =  pwo_world_events.4.t
+	desc = pwo_world_events.4.d
+	
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		add_named_threat = { threat = 3 name = GER_demand_memel_threat }
+	}
+
+	option = {
+		name = pwo_world_events.4.a
+	}
+}
+country_event = { #INVASION OF POLAND
+	id = pwo_world_events.5
+	title =  pwo_world_events.5.t
+	desc = pwo_world_events.5.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		add_named_threat = { threat = 5 name = GER_danzig_or_war }
+		add_named_threat = { threat = 2 name = GER_anti_comintern_pact }
+		set_global_flag = GER_ENG_WAR
+		ENG = {
+			add_ideas = { PWO_major_at_war }
+		}
+		FRA = {
+			add_ideas = { PWO_major_at_war }
+		}
+		RAJ = {
+			add_ideas = { PWO_minor_at_war }
+		}
+		CAN = {
+			add_ideas = { PWO_minor_at_war }
+		}
+		AST = {
+			add_ideas = { PWO_minor_at_war }
+		}
+		NZL = {
+			add_ideas = { PWO_minor_at_war }
+		}
+		MAL = {
+			add_ideas = { PWO_minor_at_war }
+		}
+		USA = { puppet = ENG }
+		USA = {
+			set_autonomy = {
+				target = ENG
+				autonomy_state = autonomy_us_ally
+			}
+		}
+	}
+
+	option = {
+		name = pwo_world_events.5.a
+	}
+}
+
+country_event = { #INVASION OF THE LOWLANDS
+	id = pwo_world_events.6
+	title =  pwo_world_events.6.t
+	desc = pwo_world_events.6.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		HOL = {
+			add_ideas = {
+				PWO_minor_at_war
+			}
+		}
+		INS = {
+			add_ideas = {
+				PWO_minor_at_war
+			}
+		}
+	}
+
+
+
+	option = {
+		name = pwo_world_events.6.a
+	}
+}
+
+country_event = { #FALL OF FRANCE
+	id = pwo_world_events.7
+	title =  pwo_world_events.7.t
+	desc = pwo_world_events.7.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		FRA = {
+			swap_ideas = {
+				remove_idea = PWO_major_at_war
+				add_idea = PWO_minor_at_war
+			}
+		}
+	}
+
+
+
+	option = {
+		name = pwo_world_events.7.a
+	}
+}
+
+country_event = { #INVASION OF SOVIET UNION
+	id = pwo_world_events.8
+	title =  pwo_world_events.8.t
+	desc = pwo_world_events.8.d
+
+	is_triggered_only = yes
+
+	major = yes
+
+	immediate = {
+		#add_power_balance_modifier = {
+		#	id = pacific_war_balance    # The ID of the balance of power
+		#	modifier = pwo_operation_barbarossa # The modifier to add
+		#}
+		#add_power_balance_modifier = {
+		#	id = pacific_war_balance
+		#	modifier = pwo_bop_modifier_GER_SOV_war
+		#}
+		set_global_flag = GER_SOV_WAR
+		USA = { puppet = SOV }
+		USA = {
+			set_autonomy = {
+				target = SOV
+				autonomy_state = autonomy_us_ally
+			}
+		}
+	}
+
+	option = {
+		name = pwo_world_events.8.a
+	}
+}

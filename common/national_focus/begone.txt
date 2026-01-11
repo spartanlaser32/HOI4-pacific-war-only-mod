@@ -1,0 +1,29 @@
+focus_tree = {
+
+	id = china_begone
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10000
+			OR = {
+				tag = PRC
+				tag = YUN
+				tag = SIK
+				tag = GXC
+				tag = SHX
+				tag = XSM
+				tag = GDC
+				tag = XIC
+				tag = SND
+				tag = KHM
+				tag = NXM
+				tag = GSM
+				tag = SIC
+				tag = KUM
+				tag = HBC
+			}
+			#tag = PRC
+		}
+	}
+}

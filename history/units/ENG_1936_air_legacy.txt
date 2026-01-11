@@ -1,0 +1,105 @@
+﻿
+
+
+air_wings = {
+
+	### RAF Middle East and Africa
+	447 = { 
+		### AHQ Egypt
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 72
+		}
+		tac_bomber_equipment_0 = {
+			owner = "ENG" 
+			amount = 48
+		}
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+	454 = { 
+		### RAF Palestine & Iraq
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 32
+		}
+	}
+	659 = { 
+		### RAF Aden
+		fighter_equipment_0 = {
+			owner = "ENG" 
+			amount = 24
+		}
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 16
+		}
+	}
+
+	### RAF Far East
+	336 = { 
+		### RAF Far East
+		nav_bomber_equipment_1 = {
+			owner = "ENG" 
+			amount = 24
+		}
+		CAS_equipment_1 = {
+			owner = "ENG" 
+			amount = 64
+		}
+	}
+	"HMS Furious"  = {
+		cv_fighter_equipment_0 =  { owner = "ENG" amount = 9 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 2 }
+	}
+	"HMS Courageous"  = {
+		cv_fighter_equipment_0 =  { owner = "ENG" amount = 9 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 4 }
+	}
+	"HMS Glorious"  = {
+		cv_fighter_equipment_0 =  { owner = "ENG" amount = 6 } #historical 9
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 4 } #historical 36
+	}
+	"HMS Eagle"  = {
+		cv_fighter_equipment_0 =  { owner = "ENG" amount = 10 }
+		cv_fighter_equipment_0 =  { owner = "ENG" amount = 8 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 10 }
+		cv_nav_bomber_equipment_1 =  { owner = "ENG" amount = 8 }
+	}
+}
+
+	#########################
+	## STARTING PRODUCTION ##
+	#########################
+instant_effect = {
+
+	add_equipment_production = {
+		equipment = {
+			type = fighter_equipment_0
+			creator = "ENG" 
+		}
+		requested_factories = 1
+		progress = 0.15
+		efficiency = 50
+		industrial_manufacturer = mio:ENG_supermarine_organization
+	}
+
+	add_equipment_production = {
+		equipment = {
+			type = tac_bomber_equipment_0
+			creator = "ENG" 
+		}
+		requested_factories = 1
+		progress = 0.1
+		efficiency = 50
+		industrial_manufacturer = mio:ENG_de_havilland_organization
+	}
+}
+	#####################

@@ -1,0 +1,117 @@
+pacific_war_balance = {
+	initial_value = 0
+	left_side = AXIS_side
+	right_side = ALLIES_side
+
+	range = {
+		id = mid_range
+		min = -0.15
+		max = 0.15
+	}
+
+	side = {
+		id = AXIS_side
+		icon = GFX_focus_attack_germany
+		range = {
+			id = AXIS_side_range_won
+			min = -1
+			max = -0.95
+			on_activate = {
+				start_peace_conference = {
+					tag = JAP
+					score_factor = 2
+					message = pwo_JAP_war_win
+					winner_scope = all
+					loser_scope = all
+				}
+			}
+		}
+		range = {
+			id = AXIS_side_range_winning
+			min = -0.95
+			max = -0.75
+			on_activate = {
+
+			}
+		}
+		range = {
+			id = AXIS_side_range_favored
+			min = -0.75
+			max = -0.55
+			on_activate = {
+
+			}
+		}
+		range = {
+			id = AXIS_side_range_sided
+			min = -0.55
+			max = -0.35
+			on_activate = {
+
+			}
+		}
+		range = {
+			id = AXIS_side_range_leaning
+			min = -0.35
+			max = -0.15
+			on_activate = {
+
+			}
+		}
+
+		
+	}
+
+	side = {
+		id = ALLIES_side
+		icon = GFX_goal_generic_attack_allies
+		range = {
+			id = ALLIES_side_range_won
+			max = 1
+			min = 0.95
+			on_activate = {
+				start_peace_conference = {
+					tag = USA
+					score_factor = 2
+					message = pwo_USA_war_win
+					winner_scope = all
+					loser_scope = all
+				}
+			}
+		}
+		range = {
+			id = ALLIES_side_range_winning
+			max = 0.95
+			min = 0.75
+			on_activate = {
+
+			}
+		}
+		range = {
+			id = ALLIES_side_range_favored
+			max = 0.75
+			min = 0.55
+			on_activate = {
+
+			}
+		}
+		range = {
+			id = ALLIES_side_range_sided
+			max = 0.55
+			min = 0.35
+			on_activate = {
+
+			}
+		}
+		range = {
+			id = ALLIES_side_range_leaning
+			max = 0.35
+			min = 0.15
+			on_activate = {
+
+			}
+		}
+	}
+
+
+}

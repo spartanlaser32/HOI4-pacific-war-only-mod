@@ -1,0 +1,94 @@
+pwo_bop_modifier_GER_SOV_war = {
+	power_balance_weekly = -0.02
+}
+
+
+pwo_bop_modifier_malaysia = {
+	power_balance_weekly = -0.005
+}
+pwo_bop_modifier_sumatra = {
+	power_balance_weekly = -0.0025
+}
+pwo_bop_modifier_java = {
+	power_balance_weekly = -0.0025
+}
+pwo_bop_modifier_borneo = {
+	power_balance_weekly = -0.0025
+}
+pwo_bop_modifier_burma = {
+	power_balance_weekly = -0.0025
+}
+pwo_bop_modifier_guangdong = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_indochina = {
+	power_balance_weekly = 0.0025
+}
+
+
+#USA LEND-LEASE
+pwo_bop_modifier_USA_ENG_food = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_guns = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_arty = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_support = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_trucks = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_tanks = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_planes = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_ENG_convoys= {
+	power_balance_weekly = 0.0025
+}
+
+
+pwo_bop_modifier_USA_SOV_food = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_guns = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_arty = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_support = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_trucks = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_tanks = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_planes = {
+	power_balance_weekly = 0.0025
+}
+pwo_bop_modifier_USA_SOV_convoys= {
+	power_balance_weekly = 0.0025
+}
+
+
+#debug
+pwo_bop_modifier_debug_big_left = {
+	power_balance_weekly = -0.005
+}
+pwo_bop_modifier_debug_big_right = {
+	power_balance_weekly = 0.005
+}
+pwo_bop_modifier_debug_small_left = {
+	power_balance_weekly = -0.0025
+}
+pwo_bop_modifier_debug_small_right = {
+	power_balance_weekly = 0.0025
+}

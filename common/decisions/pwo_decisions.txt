@@ -1,0 +1,99 @@
+pwo_decisions = {
+	man_choose_state = {
+		allowed = {
+			tag = MAN
+		}
+
+		state_target = yes
+		target_trigger = {
+			FROM = {
+				is_core_of = CHI
+				is_owned_by = MAN
+				NOT = {
+					is_in_array = { MAN_main_states = FROM}
+				}
+			}
+		}
+
+
+		visible = {
+			has_completed_focus = MAN_industrialization
+			check_variable = { MAN_main_states^num < 5 }
+		}
+		available = {
+			always = yes
+		}
+
+		complete_effect = {
+			add_to_array = {
+				array = MAN_main_states
+				value = FROM
+			}
+		}
+
+
+	}
+
+	ast_annex_nzl = {
+		allowed = {
+			tag = AST
+		}
+		#cost = 0
+		visible = { always = yes }
+
+		available = { 
+			is_ai = no 
+			NZL = { is_ai = yes }
+		}
+		
+		complete_effect = {
+			annex_country = {
+				target = NZL
+				transfer_troops = yes
+			}
+			723 = { add_core_of = AST }
+			284 = { add_core_of = AST }
+		}
+	}
+
+	man_annex_men = {
+		allowed = {
+			tag = MAN
+		}
+		#cost = 0
+		visible = { always = yes }
+
+		available = { 
+			is_ai = no 
+			MEN = { is_ai = yes }
+		}
+		
+		complete_effect = {
+			annex_country = {
+				target = MEN
+				transfer_troops = yes
+			}
+			612 = { add_core_of = MAN }
+			611 = { add_core_of = MAN }
+			1043 = { add_core_of = MAN }
+		}
+	}
+
+	can_annex_new_foundland = {
+		allowed = {
+			tag = CAN
+		}
+		#cost = 0
+		visible = { always = yes }
+
+		available = { 
+			is_ai = no 
+			ENG = { is_ai = yes }
+		}
+		
+		complete_effect = {
+			332 = { transfer_state_to = CAN }
+			331 = { transfer_state_to = CAN }
+		}
+	}
+}

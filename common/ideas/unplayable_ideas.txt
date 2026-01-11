@@ -1,0 +1,16 @@
+ideas = {
+	country = {
+		UNP_do_nothing = {
+			allowed = {
+				tag = UNP
+			}
+			picture = king_edward
+			modifier = {
+				political_power_factor = -10
+				consumer_goods_factor = 10
+				industrial_capacity_factory = -10
+				industrial_capacity_dockyard = -10
+			}
+		}
+	}
+}

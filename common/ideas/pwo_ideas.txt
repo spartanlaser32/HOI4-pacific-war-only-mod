@@ -1,0 +1,51 @@
+ideas = {
+	country = {
+		PWO_major_at_war = {
+			cancel = {
+				has_war = yes
+			}
+			
+			modifiers = {
+				stability_factor = -0.2
+				war_support_factor = 0.2
+				infantry_track_mastery_gain_factor = 5
+				combat_support_track_mastery_gain_factor = 5
+				operations_track_mastery_gain_factor = 5
+				capital_ships_track_mastery_gain_factor = 5
+				screens_track_mastery_gain_factor = 5
+				carriers_track_mastery_gain_factor = 5
+				fighter_aircraft_track_mastery_gain_factor = 5
+				strike_aircraft_track_mastery_gain_factor = 5
+				weekly_manpower = -1000
+
+			}
+		}
+
+		PWO_minor_at_war = {
+
+			cancel = {
+				has_war = yes
+			}
+			
+			modifiers = {
+				stability_factor = -0.2
+				war_support_factor = 0.2
+				infantry_track_mastery_gain_factor = 4
+				combat_support_track_mastery_gain_factor = 3
+				operations_track_mastery_gain_factor = 3
+				weekly_manpower = -500
+
+			}
+		}
+
+		PWO_USA_balancer = {
+			modifiers = {
+				factory_output = -0.5
+				consumer_goods_factor = 0.5
+				recruitable_population_factor = -0.5
+			}
+		}
+
+		
+	}
+}

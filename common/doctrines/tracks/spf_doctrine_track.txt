@@ -1,0 +1,55 @@
+mountaineer = {
+    name = DOCTRINE_TRACK_MOUNTAINEER
+    background = "GFX_air_superiority_bg"
+    icon = "GFX_doctrine_milestone_fighter_air"
+    icon_frame = "GFX_doctrine_decor_air"
+    mastery = {
+        multiplier = 2.0 
+		sub_units = {
+			mountaineers
+			rangers_support
+		}
+    }
+}
+
+marine = {
+    name = DOCTRINE_TRACK_MARINE
+    background = "GFX_air_superiority_bg"
+    icon = "GFX_doctrine_milestone_fighter_air"
+    icon_frame = "GFX_doctrine_decor_air"
+    mastery = {
+        multiplier = 2.0 
+		sub_units = {
+			marine
+			marine_commando
+			pioneer_support
+		}
+    }
+}
+
+paratrooper = {
+    name = DOCTRINE_TRACK_PARATROOPER
+    background = "GFX_air_superiority_bg"
+    icon = "GFX_doctrine_milestone_fighter_air"
+    icon_frame = "GFX_doctrine_decor_air"
+    mastery = {
+        multiplier = 3.0 
+		sub_units = {
+			paratrooper
+			airborne_light_armor
+		}
+    }
+}
+
+ranger = {
+    name = DOCTRINE_TRACK_RANGER
+    background = "GFX_air_superiority_bg"
+    icon = "GFX_doctrine_milestone_fighter_air"
+    icon_frame = "GFX_doctrine_decor_air"
+    mastery = {
+        multiplier = 2.0 
+		sub_units = {
+			ranger_battalion
+		}
+    }
+}

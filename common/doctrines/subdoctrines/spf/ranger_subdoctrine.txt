@@ -1,0 +1,176 @@
+
+rangers_left_side = {
+    track = ranger
+    name = SUBDOCTRINE_RANGERS_LEFT_SIDE
+    description = SUBDOCTRINE_FOREST_AMBUSH_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    category_special_forces = {
+        max_organisation = 5
+        soft_attack = 0.05
+    }
+    enable_subunits = {
+        rangers_support
+    }	
+
+    # EFFECTS
+    enable_tactic = ambush
+    effect = {
+    }
+
+
+    rewards = {
+        cavalry_charge = {
+            ranger_battalion = {
+                acclimatization_cold_climate_gain_factor = 0.25
+                forest = {
+                    attack = 0.1
+                    defence = 0.1
+                    movement = 0.05
+                }
+            }
+        }
+        ambush_traps = {
+            category_rangers = {
+                defense = 0.1
+                initiative = 0.01 
+                maximum_speed = 0.1
+            }
+        }
+        decisive_operations = {
+            rangers_support = {
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.05
+			}
+		}
+        }
+        delegated_authority = {
+            category_rangers = {
+                default_morale = 0.1
+                supply_consumption = -0.02		
+            }
+
+            ranger_battalion = {	
+                urban = {
+                    attack = 0.1
+                    defence = 0.1
+                    movement = 0.05
+                }
+            }
+        }
+        make_do = {
+            ranger_battalion = {
+                max_organisation = 10
+                soft_attack = 0.1
+                breakthrough = 0.1
+            }
+            rangers_special_forces_contribution_factor = -0.1
+        }
+
+    }
+}
+
+rangers_right_side = {
+    track = ranger
+    name = SUBDOCTRINE_RANGERS_RIGHT_SIDE
+    description = SUBDOCTRINE_FOREST_AMBUSH_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    category_special_forces = {
+        max_organisation = 5
+        soft_attack = 0.05
+    }
+    enable_subunits = {
+        rangers_support
+    }	
+
+    # EFFECTS
+    enable_tactic = ambush
+    effect = {
+    }
+
+
+    rewards = {
+        cavalry_charge = {
+            ranger_battalion = {
+                acclimatization_hot_climate_gain_factor = 0.25
+                jungle = {
+                    attack = 0.1
+                    defence = 0.1
+                    movement = 0.05
+                }
+            }
+        }
+        ambush_traps = {
+            category_rangers = {
+                defense = 0.1
+                initiative = 0.01 
+                maximum_speed = 0.1
+            }
+        }
+        decisive_operations = {
+            artillery = {
+                battalion_mult = {
+                    category = category_rangers
+                    defense = 0.05
+                    breakthrough = 0.05
+                }
+            }
+            rangers_support = {
+                battalion_mult = {
+                    category = category_line_artillery
+                    defense = 0.15
+                    breakthrough = 0.15
+                }
+            }
+        }
+        delegated_authority = {
+            category_rangers = {
+                default_morale = 0.1
+                supply_consumption = -0.02		
+            }
+
+            ranger_battalion = {	
+                urban = {
+                    attack = 0.1
+                    defence = 0.1
+                    movement = 0.05
+                }
+            }
+        }
+        make_do = {
+            special_forces_cap = 0.06
+            special_forces_no_supply_grace = 24
+            special_forces_training_time_factor = -0.1 
+            special_forces_attack_factor = 0.1
+        }
+
+    }
+}

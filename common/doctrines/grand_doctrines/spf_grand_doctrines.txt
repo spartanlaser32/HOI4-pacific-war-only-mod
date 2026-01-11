@@ -1,0 +1,142 @@
+spf_well_equipped = {
+    folder = spf
+
+    name = GRAND_DOCTRINE_WELL_EQUIPPED
+    description = GRAND_DOCTRINE_WELL_EQUIPPED_DESC
+    icon = GFX_doctrine_mobile_warfare_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+    tracks = {
+        mountaineer
+		marine
+		paratrooper
+		ranger
+    }
+
+    # EFFECTS
+	special_forces_no_supply_grace = 120
+    special_forces_out_of_supply_factor = -0.3
+
+    #special_forces_cap = 1
+	#enable_tactic = tactic_unexpected_thrust
+	
+
+    milestones = {
+        {
+            #Infantry
+            category_mountaineers = {
+                experience_loss_factor = -0.5
+                casualty_trickleback = 0.1
+
+            }
+
+        }
+        {
+            #Artillery/Support
+            category_marines = {
+                experience_loss_factor = -0.5
+                casualty_trickleback = 0.1
+            }
+
+        }
+        {
+            #Armor
+            category_paratroopers = {
+                experience_loss_factor = -0.5
+                casualty_trickleback = 0.1
+            }
+
+        }
+        {
+            #Operations
+            category_rangers = {
+                experience_loss_factor = -0.5
+                casualty_trickleback = 0.1
+            }
+        }
+    }
+}
+
+spf_mass_mob = {
+    folder = spf
+
+    name = GRAND_DOCTRINE_MASS_MOB
+    description = GRAND_DOCTRINE_MASS_MOB_DESC
+    icon = GFX_doctrine_mobile_warfare_medium
+    available = {
+        always = yes
+    }
+
+    xp_cost = 100
+    xp_type = army
+
+    ai_will_do = {
+        base = 1
+
+        modifier = {
+            factor = 0
+            is_major = no
+        }
+    }
+
+   # max_track_rows = 1
+
+    tracks = {
+        mountaineer
+		marine
+		paratrooper
+		ranger
+    }
+    special_forces_cap = 3
+    special_forces_min = 48
+
+
+
+    # EFFECTS
+	#planning_speed = 0.20
+	#army_speed_factor = 0.10
+	#enable_tactic = tactic_unexpected_thrust
+	
+
+    milestones = {
+        {
+            #MOUNTAINEERS
+            mountaineers_special_forces_contribution_factor = -0.5
+            #terrain_penalty_reduction = 0.2
+
+
+        }
+        {
+            #MARINES
+            marines_special_forces_contribution_factor = -0.5
+           #naval_invasion_penalty = -0.3
+
+        }
+        {
+            #PARATROOPERS
+            paratroopers_special_forces_contribution_factor = -0.5
+            #pocket_penalty = 0.1
+            
+
+        }
+        {
+            #RANGERS
+            rangers_special_forces_contribution_factor = -0.5
+
+        }
+    }
+}

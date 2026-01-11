@@ -1,0 +1,199 @@
+ideas = {
+	country = {
+		MAN_living_off_the_land = {
+			allowed = {
+				tag = MAN
+			}
+
+			picture = king_edward
+			modifier = {
+				local_resources_factor = 0.3
+				#production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_0 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_1 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.3
+				}
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_2 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.3
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_3 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.3
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_4 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.3
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				truck = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_5 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.3
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				truck = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+		MAN_scavenged_equipment_6 = {
+			allowed = {
+				tag = MAN
+			}
+		
+			picture = king_edward
+
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					build_cost_ic = -0.3
+				}
+				support_equipment = {
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				artillery = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				truck = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				light_tank_chassis = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+				small_plane_airframe = {
+					instant = yes
+					build_cost_ic = -0.1
+				}
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+			}
+		}
+
+		MAN_pig_iron = {
+			allowed = {
+				tag = MAN
+			}
+
+			modifier = {
+				country_resource_iron = 20
+			}
+
+		}
+	}
+}

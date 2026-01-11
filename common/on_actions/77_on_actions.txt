@@ -1,0 +1,435 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			UNP = {
+				every_owned_state = {
+					add_core_of = UNP
+				}
+			}
+			UNP = {
+				country_event = { id = pwo_world_events.1 days = 70 }
+				country_event = { id = pwo_world_events.2 days = 1004 }
+				country_event = { id = pwo_world_events.3 days = 1169 }
+				country_event = { id = pwo_world_events.4 days = 1178 }
+				country_event = { id = pwo_world_events.5 days = 1264 }
+				country_event = { id = pwo_world_events.6 days = 1592 }
+				country_event = { id = pwo_world_events.7 days = 1638 }
+				country_event = { id = pwo_world_events.8 days = 1997 }
+			}
+
+		}
+
+		effect = {
+			if = {
+					limit = {
+						has_game_rule = {
+							rule = pwo_war_in_europe_balancer
+							option = BALANCE_OF_POWER
+						}
+					}
+					every_country = {
+						set_power_balance = {
+							id = pacific_war_balance
+							left_side = AXIS_side
+							right_side = ALLIES_side
+							initial_value = 0
+						}
+					}
+					
+				}
+		}
+
+		effect = {
+			if = { 
+				limit = {
+					has_game_rule = {
+						rule = pwo_war_in_europe_balancer
+						option = BALANCE_OF_POWER
+					}
+				}
+
+				SOV = {
+					#set_state_owner = 408
+					transfer_state = 408
+					transfer_state = 409
+					transfer_state = 655
+					transfer_state = 637
+					transfer_state = 560
+					transfer_state = 562
+					transfer_state = 874
+					transfer_state = 637
+					transfer_state = 822
+					transfer_state = 875
+					transfer_state = 657
+					transfer_state = 561
+					transfer_state = 563
+					transfer_state = 564
+					transfer_state = 566
+					transfer_state = 567
+					transfer_state = 568
+					transfer_state = 569
+					transfer_state = 570
+					transfer_state = 571
+					transfer_state = 403
+					transfer_state = 572
+					transfer_state = 653
+					transfer_state = 573
+					transfer_state = 398
+					transfer_state = 399
+					transfer_state = 249
+					transfer_state = 256
+					transfer_state = 252
+					transfer_state = 253
+					transfer_state = 219
+					#LENINGRAD
+					transfer_state = 246
+					transfer_state = 264
+					transfer_state = 263
+					transfer_state = 244
+					transfer_state = 195
+					#Northern Russia
+					transfer_state = 248
+					transfer_state = 351
+					transfer_state = 880
+					transfer_state = 879
+					transfer_state = 214
+					#Caucuses
+					transfer_state = 254
+					transfer_state = 258
+					transfer_state = 260
+					transfer_state = 245
+					transfer_state = 218
+					transfer_state = 238
+					transfer_state = 234
+					#Iran
+					transfer_state = 651
+					transfer_state = 652
+					transfer_state = 251
+					transfer_state = 402
+					transfer_state = 404
+					transfer_state = 405
+					transfer_state = 585
+					transfer_state = 830
+					transfer_state = 832
+					transfer_state = 584
+					set_rule = {
+						can_not_declare_war = yes
+						can_create_factions =  no
+
+					}
+				}
+
+
+
+			}
+		}
+
+		
+	}
+
+	#
+	on_weekly_UNP = {
+		#GER_SOV_WAR MODIFIER
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = GER_SOV_WAR
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = -0.02
+				}
+			}
+		}
+		#JAP takes from USA
+		effect = {
+			if = {
+				limit = {
+					JAP = { controls_malaysia = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = -0.005
+				}
+			}
+			if = {
+				limit = {
+					JAP = { controls_burma = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = -0.0025
+				}
+			}
+			if = {
+				limit = {
+					JAP = { controls_borneo = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = -0.0025
+				}
+			}
+			if = {
+				limit = {
+					JAP = { controls_sumatra = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = -0.0025
+				}
+			}
+			if = {
+				limit = {
+					JAP = { controls_java = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = -0.0025
+				}
+			}
+		}
+		#USA takes from JAP
+		effect = {
+			if = {
+				limit = {
+					USA = { controls_guangdong = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = 0.0025
+				}
+			}
+			if = {
+				limit = {
+					USA = { controls_indochina = yes }
+				}
+				add_power_balance_value = {
+					id = pacific_war_balance
+					value = 0.0025
+				}
+			}
+
+		}
+	}
+
+	on_monthly_USA = {
+		#UK
+		effect = {
+			if = {
+				limit = {
+					ENG = { is_subject_of = USA }
+				}
+				ENG = {
+					if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.1
+						}
+						add_autonomy_score = {
+							value = -500
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.1
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.08
+						}
+						add_autonomy_score = {
+							value = -400
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.08
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.06
+						}
+						add_autonomy_score = {
+							value = -300
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.06
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.04
+						}
+						add_autonomy_score = {
+							value = -200
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.04
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.02
+						}
+						add_autonomy_score = {
+							value = -100
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.02
+						}
+					}
+					set_equipment_fraction = 0
+				}
+			}
+		}
+		#SOV
+		effect = {
+			if = {
+				limit = {
+					SOV = { is_subject_of = USA }
+				}
+				SOV = {
+					if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.1
+						}
+						add_autonomy_score = {
+							value = -500
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.1
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.08
+						}
+						add_autonomy_score = {
+							value = -400
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.08
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.06
+						}
+						add_autonomy_score = {
+							value = -300
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.06
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.04
+						}
+						add_autonomy_score = {
+							value = -200
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.04
+						}
+					}
+					else_if = {
+						limit = {
+							compare_autonomy_progress_ratio > 0.02
+						}
+						add_autonomy_score = {
+							value = -100
+						}
+						add_power_balance_value = {
+							id = pacific_war_balance
+							value = 0.02
+						}
+					}
+					set_equipment_fraction = 0
+				}
+			}
+		}
+	}
+
+	on_war = {
+		effect = {
+			if = {
+				limit = {
+					THIS = { tag = SOV }
+				}
+				white_peace = JAP
+			}
+		}
+	}
+
+	on_naval_invasion = {
+	 	effect = {
+		 	if = {
+				limit = {
+					ROOT = {
+						divisions_in_state = {
+							 unit = marine_commando
+							 size > 0
+							 state = PREV
+						}
+						has_mastery_level = {
+							amount = 3
+							subdoctrine = marine_left_side
+						} 
+					}
+					NOT = { has_state_flag = marines_commando_effect }
+					OWNER = { NOT = { tag = ROOT } }
+				}
+				SF_marine_demoliton_effect = yes # Note that the state flag condition is not preventing it from doing 1 damage per division 
+			}
+	 	}
+	}
+
+	on_units_paradropped_in_state = {
+		effect = {
+			if = {
+				limit = { 
+					FROM = { 
+						has_mastery_level = {
+							amount = 1
+							subdoctrine = paratrooper_left_side
+						}
+
+					} 
+					NOT = { 
+						has_state_flag = {
+						    flag = para_drop_effect
+						    value = 0
+						}
+					}
+					CONTROLLER = { NOT = { tag = FROM } }
+				}
+				SF_PARA_sabotage_effect = yes
+			}
+			if = {
+				limit = { 
+					FROM = { 
+						has_mastery_level = {
+							amount = 1
+							subdoctrine = paratrooper_right_side
+						}
+					} 
+					NOT = { 
+						has_state_flag = {
+						    flag = para_drop_effect
+						    value = 0
+						}
+					}
+				}
+				SF_PARA_combat_effect = yes
+			}
+		}
+	}
+}

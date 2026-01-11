@@ -1,0 +1,244 @@
+naval_support = {
+    track = marine
+    name = SUBDOCTRINE_NAVAL_SUPPORT
+    description = SUBDOCTRINE_NAVAL_SUPPORT_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+
+
+    rewards = {
+        cavalry_charge = {
+           #category_marines = {
+				shore_bombardment_bonus = 0.25
+				#soft_attack = 0.1
+                #breakthroug
+           # }
+        }
+        combined_arms_planning = {
+            invasion_preparation = 0.5
+            naval_invasion_planning_bonus_speed = 0.5
+        }
+        decisive_operations = {
+            amphibious_invasion = 0.5
+			amphibious_invasion_defence = 0.5
+        }
+        delegated_authority = {
+            category_carrier_fighter = {
+                air_attack = 0.1
+                air_agility = 0.1
+            }
+        }
+        maneuver_warfare = {
+            category_carrier_cas = {
+                ground_attack = 0.2
+                air_agility = 0.1
+            }
+        }
+
+    }
+}
+
+marine_left_side = {
+    track = marine
+    name = SUBDOCTRINE_MARINE_LEFT_SIDE
+    description = SUBDOCTRINE_NAVAL_SUPPORT_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+    marines_special_forces_contribution_factor = -0.25
+    naval_invasion_division_cap = 2
+    category_special_forces = {
+        max_organisation = 5
+        soft_attack = 0.05
+    }
+    effect = {
+        enable_subunits = {
+            pioneer_support
+        }
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+
+
+    rewards = {
+        cavalry_charge = {
+            pioneer_support = {
+                jungle = {
+                    attack = 0.15
+                    defence = 0.10
+                    movement = 0.10
+                }
+            }
+        }
+        combined_arms_planning = {
+            unit_marine_design_cost_factor = -0.50
+
+            marine = {
+                max_organisation = 5
+            }
+        }
+        decisive_operations = {
+            
+            
+            
+            effect = {
+                enable_subunits = {
+                    marine_commando
+                }
+                custom_effect_tooltip = SF_MARINES_exfiltration_effect_tt
+            }
+            
+            acclimatization_cold_climate_gain_factor = 0.1
+            acclimatization_hot_climate_gain_factor = 0.1
+        }
+        delegated_authority = {
+            marine_commando = {
+                breakthrough = 0.15
+            }
+            effect = {
+                custom_effect_tooltip = SF_marine_demoliton_effect_TT
+            }
+            #custom_effect_tooltip = SF_marine_demoliton_effect_TT
+        }
+        maneuver_warfare = {
+            amphibious_mechanized = {
+                soft_attack = 0.1
+                breakthrough = 0.1
+                max_organisation = 5
+            }
+            
+            pioneer_support = {
+                battalion_mult = {
+                    category = category_amphibious_tanks
+                    armor = 0.15
+                    breakthrough = 0.15
+                }
+            }
+            
+            effect = {
+                add_ideas = GEN_cheaper_amphib
+            }
+        }
+    }
+}
+
+marine_right_side = {
+    track = marine
+    name = SUBDOCTRINE_MARINE_RIGHT_SIDE
+    description = SUBDOCTRINE_NAVAL_SUPPORT_DESC
+    icon = GFX_doctrine_mobile_infantry_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+    marines_special_forces_contribution_factor = -0.25
+    naval_invasion_division_cap = 2
+    category_special_forces = {
+        max_organisation = 5
+        soft_attack = 0.05
+    }
+    
+    enable_subunits = {
+        pioneer_support
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+
+
+    rewards = {
+        cavalry_charge = {
+            pioneer_support = {
+                amphibious = {
+                    attack = 0.25
+                    defence = 0.15
+                    movement = 0.20
+                }
+            }
+        }
+        combined_arms_planning = {
+            unit_marine_design_cost_factor = -0.50
+
+            marine = {
+                max_organisation = 5
+            }
+        }
+        decisive_operations = {
+            special_forces_cap = 0.06
+            naval_invasion_planning_bonus_speed = 0.2
+            
+            army_bonus_air_superiority_factor = 0.10
+        }
+        delegated_authority = {
+            pioneer_support = {
+                battalion_mult = {
+                    category = category_line_artillery
+                    max_organisation = 2
+                    add = yes
+                }
+            }
+            
+            shore_bombardment_bonus = 0.15
+            special_forces_attack_factor = 0.10
+        }
+        maneuver_warfare = {
+            artillery = {
+                battalion_mult = {
+                    category = category_marines
+                    defense = 0.05
+                }
+            }
+            
+            anti_air = {
+                battalion_mult = {
+                    category = category_marines
+                    defense = 0.05
+                }
+            }
+            
+            anti_tank = {
+                battalion_mult = {
+                    category = category_marines
+                    defense = 0.05
+                }
+            }
+
+            extra_marine_supply_grace = 24
+            naval_invasion_prep_days = -5
+            naval_invasion_plan_cap = 1
+        }
+    }
+}

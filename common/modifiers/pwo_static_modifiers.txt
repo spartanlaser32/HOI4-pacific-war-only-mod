@@ -1,0 +1,7 @@
+pwo_diff_submarine_balancer = {
+	navy_submarine_attack_factor = -1
+}
+
+pwo_usa_lend_lease_modifier = {
+	autonomony_gain_ll_to_subject_factor = -1
+}
