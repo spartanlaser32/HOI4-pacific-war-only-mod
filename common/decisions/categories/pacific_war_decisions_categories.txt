@@ -54,3 +54,14 @@ pacific_war_decisions = {
 pwo_decisions = {
 	icon = generic_research
 }
+
+MTG_naval_treaties = {
+	picture = GFX_decision_cat_picture_naval_treaties
+	allowed = {
+		always = no
+	}
+	visible = {
+		always = no
+	}
+	#priority = 10
+}
