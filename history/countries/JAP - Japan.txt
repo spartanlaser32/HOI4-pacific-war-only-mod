@@ -17,7 +17,7 @@ create_faction_from_template = faction_template_new_order_in_east_asia_faction
 add_to_faction = JAP
 add_to_faction = MAN
 add_to_faction = MEN
-#add_to_faction = SIA
+add_to_faction = SIA
 add_dynamic_modifier = {
 	modifier = JAP_imperial_influence_dm
 }
@@ -321,12 +321,12 @@ add_ideas = {
 	JAP_japanese_armor_doctrine
 }
 
-IF = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	add_ideas = MTG_naval_treaty_adherent
-}
+#IF = {
+#	limit = {
+#		has_dlc = "Man the Guns"
+#	}
+#	add_ideas = MTG_naval_treaty_adherent
+#}
 
 
 
@@ -968,12 +968,12 @@ JAP_isoroku_yamamoto = {
 		closed_economy
 	}
 
-	IF = {
-		limit = {
-			has_dlc = "Man the Guns"
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-	}
+	#IF = {
+	#	limit = {
+	#		has_dlc = "Man the Guns"
+	#	}
+	#	remove_ideas = MTG_naval_treaty_adherent
+	#}
 
 	complete_national_focus = JAP_sea_purge_the_kodoha_faction
 	complete_national_focus = JAP_ministry_of_commerce_and_industry

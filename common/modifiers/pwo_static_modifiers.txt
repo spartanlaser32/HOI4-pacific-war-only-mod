@@ -3,5 +3,5 @@ pwo_diff_submarine_balancer = {
 }
 
 pwo_usa_lend_lease_modifier = {
-	autonomony_gain_ll_to_subject_factor = -1
+	autonomy_gain_ll_to_subject_factor = -1
 }

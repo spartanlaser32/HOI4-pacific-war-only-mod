@@ -1,5 +1,6 @@
 on_actions = {
 	on_startup = {
+		#SETUP for UNP: Core states to avoid resistance and kickstart global events
 		effect = {
 			UNP = {
 				every_owned_state = {
@@ -18,6 +19,23 @@ on_actions = {
 			}
 
 		}
+
+		#Get rid of anyone playing the unplayable nation by
+		#releasing Iceland, changing them to Iceland, and then annexing Iceland
+
+		effect = {
+			ICE = {
+				transfer_state = 100
+				change_tag_from = UNP
+			}
+			UNP = {
+				annex_country = {
+					target = ICE
+				}
+			}
+		}
+
+
 
 		effect = {
 			if = {
@@ -430,6 +448,68 @@ on_actions = {
 				}
 				SF_PARA_combat_effect = yes
 			}
+		}
+	}
+
+	on_nuke_drop = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = USA }
+					FROM = {
+						is_core_of = JAP
+						is_in_home_area = yes
+					}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = first_USA_JAP_nuke
+						}
+					}
+					set_global_flag = first_USA_JAP_nuke
+				} 
+				else = {
+					start_peace_conference = {
+						tag = USA
+						score_factor = 2
+						message = nuke_USA_war_win
+						winner_scope = all
+						loser_scope = all
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					ROOT = { tag = JAP }
+					FROM = {
+						is_core_of = USA
+						is_in_home_area = yes
+					}
+				}
+
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = first_JAP_USA_nuke
+						}
+					}
+					set_global_flag = first_JAP_USA_nuke
+				} 
+				else = {
+					start_peace_conference = {
+						tag = JAP
+						score_factor = 2
+						message = nuke_JAP_war_win
+						winner_scope = all
+						loser_scope = all
+					}
+				}
+			}
+
+
 		}
 	}
 }

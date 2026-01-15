@@ -11,7 +11,7 @@ state={
 	}
 
 	history={
-		owner = UNP
+		#owner = UNP
 		buildings = {
 			infrastructure = 1
 			dockyard = 1

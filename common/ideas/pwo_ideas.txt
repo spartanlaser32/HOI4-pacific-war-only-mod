@@ -39,8 +39,11 @@ ideas = {
 		}
 
 		PWO_USA_balancer = {
+			allowed = {
+				tag = USA
+			}
 			modifiers = {
-				factory_output = -0.5
+				industrial_capacity_factory = -0.5
 				consumer_goods_factor = 0.5
 				recruitable_population_factor = -0.5
 			}
