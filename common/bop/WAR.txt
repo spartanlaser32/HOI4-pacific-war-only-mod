@@ -17,13 +17,10 @@ pacific_war_balance = {
 			min = -1
 			max = -0.95
 			on_activate = {
-				start_peace_conference = {
-					tag = JAP
-					score_factor = 2
-					message = pwo_JAP_war_win
-					winner_scope = all
-					loser_scope = all
-				}
+				activate_mission = pwo_bop_ger_win_imminent_mission
+			}
+			on_deactivate = {
+				remove_mission = pwo_bop_ger_win_imminent_mission
 			}
 		}
 		range = {
@@ -70,13 +67,10 @@ pacific_war_balance = {
 			max = 1
 			min = 0.95
 			on_activate = {
-				start_peace_conference = {
-					tag = USA
-					score_factor = 2
-					message = pwo_USA_war_win
-					winner_scope = all
-					loser_scope = all
-				}
+				activate_mission = pwo_bop_allied_win_imminent_mission
+			}
+			on_deactivate = {
+				remove_mission = pwo_bop_allied_win_imminent_mission
 			}
 		}
 		range = {

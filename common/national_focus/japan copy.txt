@@ -5506,6 +5506,50 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = PWO_JAP_final_leap
+		icon = GFX_focus_JAP_balanced_naval_approach
+
+		relative_position_id = JAP_form_the_jikyoku_iinkai
+		x = 0
+		y = 1
+		
+		cost = 2
+
+		prerequisite = { focus = JAP_form_the_jikyoku_iinkai }
+
+		available = {
+			OR = {
+				controls_state = 632
+				any_allied_country = {
+					controls_state = 632
+				}
+			}
+			OR = {
+				controls_state = 631
+				any_allied_country = {
+					controls_state = 631
+				}
+			}
+			OR = {
+				controls_state = 630
+				any_allied_country = {
+					controls_state = 630
+				}
+			}
+			OR = {
+				controls_state = 629
+				any_allied_country = {
+					controls_state = 629
+				}
+			}
+		}
+
+		complete_effect = {
+			add_ideas = { PWO_JAP_the_leap }
+		}
+	}
+
 
 
 

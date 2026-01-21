@@ -8,3 +8,8 @@ USA_economy_dynamic_modifier = {
 	join_faction_tension = 0.20
 	local_resources_factor = -0.2
 }
+
+fleet_overstack_dynamic_modifier = {
+	naval_damage_factor = ROOT.fleet_overstack_naval_damage_factor
+	naval_coordination = ROOT.fleet_overstack_naval_damage_factor
+}

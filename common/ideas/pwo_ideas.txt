@@ -5,7 +5,7 @@ ideas = {
 				has_war = yes
 			}
 			
-			modifiers = {
+			modifier = {
 				stability_factor = -0.2
 				war_support_factor = 0.2
 				infantry_track_mastery_gain_factor = 5
@@ -27,7 +27,7 @@ ideas = {
 				has_war = yes
 			}
 			
-			modifiers = {
+			modifier = {
 				stability_factor = -0.2
 				war_support_factor = 0.2
 				infantry_track_mastery_gain_factor = 4
@@ -42,10 +42,97 @@ ideas = {
 			allowed = {
 				tag = USA
 			}
-			modifiers = {
+			modifier = {
 				industrial_capacity_factory = -0.5
 				consumer_goods_factor = 0.5
 				recruitable_population_factor = -0.5
+			}
+		}
+
+		PWO_USA_90 = {
+			allowed = {
+				tag = USA
+			}
+			modifier = {
+				industrial_capacity_factory = -0.9
+				consumer_goods_factor = 0.9
+				recruitable_population_factor = -0.9
+			}
+		}
+
+		PWO_USA_75 = {
+			allowed = {
+				tag = USA
+			}
+			modifier = {
+				industrial_capacity_factory = -0.75
+				consumer_goods_factor = 0.75
+				recruitable_population_factor = -0.75
+			}
+		}
+
+		PWO_USA_50 = {
+			allowed = {
+				tag = USA
+			}
+			modifier = {
+				industrial_capacity_factory = -0.5
+				consumer_goods_factor = 0.5
+				recruitable_population_factor = -0.5
+			}
+		}
+
+		PWO_USA_25 = {
+			allowed = {
+				tag = USA
+			}
+			modifier = {
+				industrial_capacity_factory = -0.25
+				consumer_goods_factor = 0.25
+				recruitable_population_factor = -0.25
+			}
+		}
+
+		PWO_USA_10 = {
+			allowed = {
+				tag = USA
+			}
+			modifier = {
+				industrial_capacity_factory = -0.1
+				consumer_goods_factor = 0.1
+				recruitable_population_factor = -0.1
+			}
+		}
+
+		PWO_USA_no_plan = {
+			modifier = {
+				max_planning_factor = -2
+				army_org_factor = -0.8
+				army_org_regain = -0.5
+				max_dig_in_factor = -1
+				recon_factor = -1
+				army_speed_factor = -0.5
+				army_defence_factor = -0.5
+				army_breakthrough_factor = -0.8
+				army_attack_factor = -0.8
+				coordination_bonus = -1
+
+				naval_coordination = -2
+				naval_damage_factor = -0.8
+				navy_org_factor = -0.8
+				naval_defense_factor = -0.8
+				naval_speed_factor = -0.7
+				positioning = -0.8
+
+				air_accidents_factor = 5
+				air_mission_efficiency = -0.9
+				air_weather_penalty = 3
+			}
+		}
+
+		PWO_JAP_the_leap = {
+			modifier = {
+				navy_max_range_factor = 0.5
 			}
 		}
 

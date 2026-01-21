@@ -4,15 +4,15 @@ oob = "USA_1936"
 
 starting_train_buffer = 5
 
-if = {
-	limit = {
-		has_game_rule = {
-			rule = pwo_war_in_europe_balancer
-			option = NATIONAL_SPIRIT
-		}
-	}
-	add_ideas = { PWO_USA_balancer }
-}
+#if = {
+#	limit = {
+#		has_game_rule = {
+#			rule = pwo_war_in_europe_balancer
+#			option = NATIONAL_SPIRIT
+#		}
+#	}
+#	add_ideas = { PWO_USA_balancer }
+#}
 
 if = {
 	limit = { has_dlc = "Man the Guns" }
@@ -113,6 +113,8 @@ set_technology = {
 	marines = 1
 	basic_train = 1
 	engine_tech_1 = 1
+
+	special_forces_equipments = 1
 }
 
 set_grand_doctrine = superior_firepower

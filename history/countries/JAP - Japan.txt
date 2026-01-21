@@ -461,6 +461,8 @@ set_technology = {
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	fuel_refining = 1
+
+	special_forces_equipments = 1
 	
 }
 

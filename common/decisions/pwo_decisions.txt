@@ -96,4 +96,54 @@ pwo_decisions = {
 			331 = { transfer_state_to = CAN }
 		}
 	}
+
+	pwo_usa_crush_jap_mission = {
+		days_mission_timeout = 730
+		timeout_effect = {
+			start_peace_conference = {
+				tag = JAP
+				score_factor = 2
+				message = pwo_JAP_war_win
+				winner_scope = all
+				loser_scope = all
+			}
+		}
+	}
+	pwo_usa_focus_jap_mission = {
+		days_mission_timeout = 1460
+		timeout_effect = {
+			start_peace_conference = {
+				tag = JAP
+				score_factor = 2
+				message = pwo_JAP_war_win
+				winner_scope = all
+				loser_scope = all
+			}
+		}
+	}
+
+	pwo_jap_crush_ger_mission = {
+		days_mission_timeout = 730
+		timeout_effect = {
+			start_peace_conference = {
+				tag = USA
+				score_factor = 2
+				message = pwo_USA_war_win
+				winner_scope = all
+				loser_scope = all
+			}
+		}
+	}
+	pwo_jap_focus_ger_mission = {
+		days_mission_timeout = 1460
+		timeout_effect = {
+			start_peace_conference = {
+				tag = USA
+				score_factor = 2
+				message = pwo_USA_war_win
+				winner_scope = all
+				loser_scope = all
+			}
+		}
+	}
 }

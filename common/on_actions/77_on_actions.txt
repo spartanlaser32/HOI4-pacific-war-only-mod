@@ -35,26 +35,46 @@ on_actions = {
 			}
 		}
 
+		#fleet overstacking
+		effect = {
+			every_country = {
+				every_character = {
+					limit = { is_navy_leader = yes }
+					add_dynamic_modifier = { modifier = fleet_overstack_dynamic_modifier  }
+				}
+			}
+		}
+
 
 
 		effect = {
 			if = {
-					limit = {
-						has_game_rule = {
-							rule = pwo_war_in_europe_balancer
-							option = BALANCE_OF_POWER
-						}
+				limit = {
+					has_game_rule = {
+						rule = pwo_war_in_europe_balancer
+						option = BALANCE_OF_POWER
 					}
-					every_country = {
-						set_power_balance = {
-							id = pacific_war_balance
-							left_side = AXIS_side
-							right_side = ALLIES_side
-							initial_value = 0
-						}
-					}
-					
 				}
+				every_country = {
+					set_power_balance = {
+						id = pacific_war_balance
+						left_side = AXIS_side
+						right_side = ALLIES_side
+						initial_value = 0
+					}
+				}
+					
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = pwo_war_in_europe_balancer
+						option = NATIONAL_SPIRIT
+					}
+				}
+				#USA = { add_ideas = { PWO_USA_balancer } }
+			}
+			
 		}
 
 		effect = {
@@ -230,6 +250,11 @@ on_actions = {
 
 		}
 	}
+	on_weekly = {
+		effect = {
+			HMP_check_fleet_size = yes 
+		}
+	}
 
 	on_monthly_USA = {
 		#UK
@@ -383,6 +408,51 @@ on_actions = {
 					THIS = { tag = SOV }
 				}
 				white_peace = JAP
+			}
+		}
+
+
+		effect = {
+			if = {
+				limit = {
+					THIS = { tag = USA }
+				}
+				if = {
+					limit = {
+						has_completed_focus = PWO_USA_crush_jap
+					}
+					pwo_usa_focus_10_effect = yes
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = PWO_USA_focus_jap
+					}
+					pwo_usa_focus_25_effect = yes
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = PWO_USA_balanced_focus
+					}
+					pwo_usa_focus_50_effect = yes
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = PWO_USA_focus_ger
+					}
+					pwo_usa_focus_75_effect = yes
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = PWO_USA_crush_ger
+					}
+					pwo_usa_focus_90_effect = yes
+				}
+				else = {
+					USA = {
+						add_ideas = PWO_USA_no_plan
+					}
+				}
+
 			}
 		}
 	}

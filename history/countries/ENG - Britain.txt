@@ -137,6 +137,8 @@ set_technology = {
 	radio = 1
 	fuel_silos = 1
 	fuel_refining = 1
+
+	special_forces_equipments = 1
 }
 
 set_grand_doctrine = grand_battleplan
@@ -449,6 +451,8 @@ if = {
 		infantry_weapons2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
+
+		#special_forces_equipments = 1
 		
 
 		#doctrines

@@ -1925,7 +1925,7 @@ focus_tree = {
 		id = USA_empower_the_huac
 		icon = GFX_goal_generic_war_with_comintern
 		x = 0
-		y = 3
+		y = 2
 		prerequisite = { focus = USA_extend_the_chinese_exclusion_acts }
 		prerequisite = { focus = USA_labour_management_relations_act }
 		relative_position_id = USA_america_first
@@ -1958,7 +1958,7 @@ focus_tree = {
 		id = USA_voter_registration_act
 		icon = GFX_focus_usa_voter_registration_act
 		x = 0
-		y = 5
+		y = 3
 		prerequisite = { focus = USA_empower_the_huac }
 		relative_position_id = USA_america_first
 		cost = 10
@@ -3619,6 +3619,192 @@ focus_tree = {
 				bonus = 1.0
 				uses = 2
 				category = tp_tech 
+			}
+		}
+	}
+
+
+	#########
+	## PWO ##
+	#########
+
+	focus = {
+		id = PWO_USA_crush_jap
+
+		allow_branch = {
+			has_game_rule = {
+				rule = pwo_war_in_europe_balancer
+				option = NATIONAL_SPIRIT
+			}
+		}
+
+		mutually_exclusive = {
+			focus = PWO_USA_focus_jap
+			focus = PWO_USA_balanced_focus
+			focus = PWO_USA_focus_ger
+			focus = PWO_USA_crush_ger
+		}
+		relative_position_id = USA_income_tax_reform
+		x = 2
+		y = 1
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = pwo_usa_focus_10_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = pwo_late_planning_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = JAP
+					}
+					pwo_usa_focus_10_effect = yes
+					
+				}
+			}
+		}
+
+
+	}
+
+	focus = {
+		id = PWO_USA_focus_jap
+
+		allow_branch = {
+			has_game_rule = {
+				rule = pwo_war_in_europe_balancer
+				option = NATIONAL_SPIRIT
+			}
+		}
+
+		mutually_exclusive = {
+			focus = PWO_USA_crush_jap
+			focus = PWO_USA_balanced_focus
+			focus = PWO_USA_focus_ger
+			focus = PWO_USA_crush_ger
+		}
+		relative_position_id = PWO_USA_crush_jap
+		x = 2
+		y = 0
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = pwo_usa_focus_25_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = pwo_late_planning_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = JAP
+					}
+					pwo_usa_focus_25_effect = yes
+					
+				}
+			}
+		}
+	}
+	focus = {
+		id = PWO_USA_balanced_focus
+
+		allow_branch = {
+			has_game_rule = {
+				rule = pwo_war_in_europe_balancer
+				option = NATIONAL_SPIRIT
+			}
+		}
+
+		mutually_exclusive = {
+			focus = PWO_USA_crush_jap
+			focus = PWO_USA_focus_jap
+			focus = PWO_USA_focus_ger
+			focus = PWO_USA_crush_ger
+		}
+		relative_position_id = PWO_USA_focus_jap
+		x = 2
+		y = 0
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = pwo_usa_focus_50_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = pwo_late_planning_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = JAP
+					}
+					pwo_usa_focus_50_effect = yes
+					
+				}
+			}
+		}
+	}
+	focus = {
+		id = PWO_USA_focus_ger
+
+		allow_branch = {
+			has_game_rule = {
+				rule = pwo_war_in_europe_balancer
+				option = NATIONAL_SPIRIT
+			}
+		}
+
+		mutually_exclusive = {
+			focus = PWO_USA_crush_jap
+			focus = PWO_USA_focus_jap
+			focus = PWO_USA_balanced_focus
+			focus = PWO_USA_crush_ger
+		}
+		relative_position_id = PWO_USA_balanced_focus
+		x = 2
+		y = 0
+		cost = 10
+		completion_reward = {
+			custom_effect_tooltip = pwo_usa_focus_75_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = pwo_late_planning_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = JAP
+					}
+					pwo_usa_focus_75_effect = yes
+					
+				}
+			}
+		}
+	}
+	focus = {
+		id = PWO_USA_crush_ger
+
+		allow_branch = {
+			has_game_rule = {
+				rule = pwo_war_in_europe_balancer
+				option = NATIONAL_SPIRIT
+			}
+		}
+
+		mutually_exclusive = {
+			focus = PWO_USA_crush_jap
+			focus = PWO_USA_focus_jap
+			focus = PWO_USA_balanced_focus
+			focus = PWO_USA_focus_ger
+		}
+		relative_position_id = PWO_USA_focus_ger
+		x = 2
+		y = 0
+
+		cost = 10
+
+		completion_reward = {
+			custom_effect_tooltip = pwo_usa_focus_90_tt
+			custom_effect_tooltip = generic_skip_one_line_tt
+			custom_effect_tooltip = pwo_late_planning_tt
+			hidden_effect = {
+				if = {
+					limit = {
+						has_war_with = JAP
+					}
+					pwo_usa_focus_90_effect = yes
+					
+				}
 			}
 		}
 	}
