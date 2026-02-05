@@ -133,6 +133,9 @@ pacific_war_decisions = {
 
 
 	pwo_bop_ger_win_imminent_mission = {
+		activation = {
+			always = no
+		}
 		available = {
 			always = no
 		}
@@ -173,6 +176,9 @@ pacific_war_decisions = {
 	}
 
 	pwo_jap_win_imminent_mission = {
+		activation = {
+			always = no
+		}
 		available = {
 			all_core_state = {
 				if = {
@@ -196,6 +202,9 @@ pacific_war_decisions = {
 	}
 
 	pwo_bop_allied_win_imminent_mission = {
+		activation = {
+			always = no
+		}
 		available = {
 			always = no
 		}
@@ -235,6 +244,9 @@ pacific_war_decisions = {
 	}
 
 	pwo_usa_win_imminent_mission = {
+		activation = {
+			always = no
+		}
 		available = {
 			all_core_state = {
 				if = {

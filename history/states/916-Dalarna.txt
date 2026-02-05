@@ -14,7 +14,7 @@ state={
 			156 1
 		}
 		owner = UNP
-		add_core_of = SWE
+		
 		buildings = {
 			infrastructure = 3
 		}

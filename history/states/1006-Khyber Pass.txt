@@ -7,7 +7,7 @@ state={
 		5082 12831 
 	}
 	history={
-		#owner = UNP
+		owner = UNP
 		buildings = {
 			infrastructure = 1 
 		}

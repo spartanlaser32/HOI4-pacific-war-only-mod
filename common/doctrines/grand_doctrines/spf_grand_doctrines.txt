@@ -101,8 +101,17 @@ spf_mass_mob = {
 		paratrooper
 		ranger
     }
-    special_forces_cap = 3
-    special_forces_min = 48
+    #special_forces_cap = 3
+    #special_forces_min = 48
+
+    equipment_bonus = {
+        special_forces_equipment = {
+            instant = yes
+            build_cost_ic = -0.5
+        }
+    }
+
+
 
 
 
@@ -115,27 +124,39 @@ spf_mass_mob = {
     milestones = {
         {
             #MOUNTAINEERS
-            mountaineers_special_forces_contribution_factor = -0.5
+            #mountaineers_special_forces_contribution_factor = -0.5
             #terrain_penalty_reduction = 0.2
+            category_mountaineers = {
+                combat_width = -0.2
+            }
 
 
         }
         {
             #MARINES
-            marines_special_forces_contribution_factor = -0.5
+            #marines_special_forces_contribution_factor = -0.5
            #naval_invasion_penalty = -0.3
+            category_marines = {
+                combat_width = -0.2
+            }
 
         }
         {
             #PARATROOPERS
-            paratroopers_special_forces_contribution_factor = -0.5
+            #paratroopers_special_forces_contribution_factor = -0.5
             #pocket_penalty = 0.1
+            category_paratroopers = {
+                combat_width = -0.2
+            }
             
 
         }
         {
             #RANGERS
-            rangers_special_forces_contribution_factor = -0.5
+            category_rangers = {
+                combat_width = -0.2
+            }
+            #rangers_special_forces_contribution_factor = -0.5
 
         }
     }

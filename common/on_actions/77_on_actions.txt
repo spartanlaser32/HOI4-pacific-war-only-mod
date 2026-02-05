@@ -20,6 +20,31 @@ on_actions = {
 
 		}
 
+		effect = {
+			every_country = {
+				set_variable = { skill_level_calculator = 5}
+				every_navy_leader = {
+					set_variable = { fleet_cap = 75 }
+					set_temp_variable = { skill_fleet_cap = 5 }
+					multiply_temp_variable = { skill_fleet_cap = this.skill_level }
+					add_to_variable = { fleet_cap = skill_fleet_cap }
+				}
+				set_variable = { fleet_protector_button_on = 1 }
+				add_to_array = { global.pwo_country_list = THIS }
+			}
+
+			UNP = {
+				remove_from_array = { global.pwo_country_list = THIS }
+			}
+			set_variable = { global.pwo_hosttool_curr_country = JAP }
+			set_variable = { global.pwo_hosttool_host = JAP }
+			set_variable = { global.pwo_hosttool_state_resources = 0 }
+			set_variable = { global.pwo_hosttool_resource_type = 1 }
+
+			
+			
+		}
+
 		#Get rid of anyone playing the unplayable nation by
 		#releasing Iceland, changing them to Iceland, and then annexing Iceland
 
@@ -253,6 +278,17 @@ on_actions = {
 	on_weekly = {
 		effect = {
 			HMP_check_fleet_size = yes 
+		}
+	}
+
+	on_unit_leader_level_up = {
+		effect = {
+			if = {
+				limit = {
+					is_navy_leader = yes
+				}
+				add_to_variable = { fleet_cap = 5 }
+			}
 		}
 	}
 

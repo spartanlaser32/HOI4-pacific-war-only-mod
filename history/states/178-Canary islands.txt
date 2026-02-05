@@ -21,7 +21,7 @@ state={
 			natural_harbor = 13071
 		}
 
-		add_core_of = SPR
+		
 	}
 
 	provinces={

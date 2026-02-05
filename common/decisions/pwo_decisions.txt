@@ -98,6 +98,9 @@ pwo_decisions = {
 	}
 
 	pwo_usa_crush_jap_mission = {
+		activation = {
+			always = no
+		}
 		days_mission_timeout = 730
 		timeout_effect = {
 			start_peace_conference = {
@@ -110,6 +113,9 @@ pwo_decisions = {
 		}
 	}
 	pwo_usa_focus_jap_mission = {
+		activation = {
+			always = no
+		}
 		days_mission_timeout = 1460
 		timeout_effect = {
 			start_peace_conference = {
@@ -123,6 +129,9 @@ pwo_decisions = {
 	}
 
 	pwo_jap_crush_ger_mission = {
+		activation = {
+			always = no
+		}
 		days_mission_timeout = 730
 		timeout_effect = {
 			start_peace_conference = {
@@ -135,6 +144,9 @@ pwo_decisions = {
 		}
 	}
 	pwo_jap_focus_ger_mission = {
+		activation = {
+			always = no
+		}
 		days_mission_timeout = 1460
 		timeout_effect = {
 			start_peace_conference = {

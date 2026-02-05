@@ -1,0 +1,160 @@
+add_namespace = pwo_host_events
+
+## SUB1 MIL
+news_event = {
+	id = pwo_host_events.1
+	title = pwo_host_events.1.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## SUB5 MIL
+news_event = {
+	id = pwo_host_events.2
+	title = pwo_host_events.2.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## ADD1 MIL
+news_event = {
+	id = pwo_host_events.3
+	title = pwo_host_events.3.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## ADD5 MIL
+news_event = {
+	id = pwo_host_events.4
+	title = pwo_host_events.4.t
+	is_triggered_only = yes
+	major = yes
+}
+
+
+
+## SUB1 CIV
+news_event = {
+	id = pwo_host_events.5
+	title = pwo_host_events.5.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## SUB5 CIV
+news_event = {
+	id = pwo_host_events.6
+	title = pwo_host_events.6.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## ADD1 CIV
+news_event = {
+	id = pwo_host_events.7
+	title = pwo_host_events.7.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## ADD5 CIV
+news_event = {
+	id = pwo_host_events.8
+	title = pwo_host_events.8.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## SUB1 DOCK
+news_event = {
+	id = pwo_host_events.9
+	title = pwo_host_events.9.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## SUB5 DOCK
+news_event = {
+	id = pwo_host_events.10
+	title = pwo_host_events.10.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## ADD1 DOCK
+news_event = {
+	id = pwo_host_events.11
+	title = pwo_host_events.11.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## ADD5 DOCK
+news_event = {
+	id = pwo_host_events.12
+	title = pwo_host_events.12.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## CHANGE HOST
+
+news_event = {
+	id = pwo_host_events.13
+	title = pwo_host_events.13.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## Transfer state
+news_event = {
+	id = pwo_host_events.14
+	title = pwo_host_events.14.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## Core state
+news_event = {
+	id = pwo_host_events.15
+	title = pwo_host_events.15.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## set owner
+news_event = {
+	id = pwo_host_events.16
+	title = pwo_host_events.16.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## set controller
+news_event = {
+	id = pwo_host_events.17
+	title = pwo_host_events.17.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## annex country
+news_event = {
+	id = pwo_host_events.18
+	title = pwo_host_events.18.t
+	is_triggered_only = yes
+	major = yes
+}
+
+## add resources
+news_event = {
+	id = pwo_host_events.19
+	title = pwo_host_events.19.t
+	is_triggered_only = yes
+	major = yes
+}
+
+
+
+

@@ -13,8 +13,8 @@ state = {
 			9296 3 
 		}
 		
-		#owner = UNP
-		add_core_of = NOR
+		owner = UNP
+		
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1

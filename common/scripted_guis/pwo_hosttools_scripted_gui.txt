@@ -1,0 +1,394 @@
+scripted_gui = {
+	
+	pwo_hosttool_open_button = {
+		context_type = player_context
+		window_name = "pwo_hosttool_open_button_container"
+		#parent_window_token = top_bar
+
+		dirty = global.update_monie_ui
+
+		visible = {
+			#always = yes
+			check_variable = { global.pwo_hosttool_host = THIS}
+		}
+
+		effects = {
+			pwo_hosttool_open_button_click = {
+				if = {
+					limit = { NOT = { has_country_flag = open_pwo_hosttool } }
+					set_country_flag = open_pwo_hosttool 
+				}
+				else = {
+					clr_country_flag = open_pwo_hosttool 
+				}
+				ingame_update_setup = yes
+			}
+			
+		}
+	}
+
+	
+
+	
+
+
+
+	pwo_hosttool_tab = {
+		context_type = player_context
+		window_name = "pwo_hosttool_tab"
+
+		dirty = global.update_monie_ui
+		visible = {
+			ROOT = {
+				
+				has_country_flag = open_pwo_hosttool 
+				check_variable = { global.pwo_hosttool_host = THIS }
+				
+			}
+		}
+
+
+		dynamic_lists = {
+			pwo_hosttool_country_list = {
+				array = global.pwo_country_list
+				value = v
+				change_scope = yes
+				entry_container = "pwo_hosttool_country_button_container"
+			}
+		}
+
+		effects = {
+			pwo_hosttool_country_button_click = {
+				set_variable = { global.pwo_hosttool_curr_country = v }
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_host_button_click = {
+				ROOT = {
+					set_variable = {
+						global.pwo_hosttool_host = global.pwo_hosttool_curr_country
+					}
+				}
+				news_event = pwo_host_events.13
+			}
+
+
+			pwo_hosttool_mils_sub1_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = arms_factory
+						level = -1
+					}
+				}
+				news_event = pwo_host_events.1
+			}
+			pwo_hosttool_mils_sub5_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = arms_factory
+						level = -5
+					}
+				}
+				news_event = pwo_host_events.2
+			}
+			pwo_hosttool_mils_add1_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = arms_factory
+						level = 1
+					}
+				}
+				news_event = pwo_host_events.3
+			}
+			pwo_hosttool_mils_add5_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = arms_factory
+						level = 5
+					}
+				}
+				news_event = pwo_host_events.4
+			}
+
+			pwo_hosttool_civs_sub1_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = -1
+					}
+				}
+				news_event = pwo_host_events.5
+			}
+			pwo_hosttool_civs_sub5_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = -5
+					}
+				}
+				news_event = pwo_host_events.6
+			}
+			pwo_hosttool_civs_add1_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+				news_event = pwo_host_events.7
+			}
+			pwo_hosttool_civs_add5_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = industrial_complex
+						level = 5
+					}
+				}
+				news_event = pwo_host_events.8
+			}
+
+			pwo_hosttool_docks_sub1_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = dockyard
+						level = -1
+					}
+				}
+				news_event = pwo_host_events.9
+			}
+			pwo_hosttool_docks_sub5_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = dockyard
+						level = -5
+					}
+				}
+				news_event = pwo_host_events.10
+			}
+			pwo_hosttool_docks_add1_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = dockyard
+						level = 1
+					}
+				}
+				news_event = pwo_host_events.11
+			}
+			pwo_hosttool_docks_add5_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_offsite_building = {
+						type = dockyard
+						level = 5
+					}
+				}
+				news_event = pwo_host_events.12
+			}
+
+			pwo_hosttool_close_button = {
+				
+				ROOT = {clr_country_flag = open_pwo_hosttool }
+				ingame_update_setup = yes
+			}
+
+
+
+		}
+	}
+
+
+	pwo_hosttool_state_tab = {
+		context_type = selected_state_context
+		window_name = "pwo_hosttool_state_tab"
+		parent_window_name = pwo_hosttool_tab
+		#parent_scripted_gui = "pwo_hosttool_tab"
+
+		dirty = global.update_monie_ui
+
+		visible = {
+			ROOT = {
+				has_country_flag = open_pwo_hosttool
+				check_variable = { global.pwo_hosttool_host = THIS}
+
+			}
+		}
+
+		properties = {
+			pwo_hosttool_resources = {
+				frame = global.pwo_hosttool_resource_type
+			}
+		}
+
+		effects = {
+
+			pwo_hosttool_state_transfer_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					transfer_state = PREV
+				}
+				UNP = {news_event = pwo_host_events.14}
+			}
+
+			pwo_hosttool_state_core_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					add_state_core = PREV
+				}
+				UNP = {news_event = pwo_host_events.15}
+			}
+
+			pwo_hosttool_state_owner_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					set_state_owner = PREV
+				}
+				UNP = {news_event = pwo_host_events.16}
+			}
+			pwo_hosttool_state_controller_button_click = {
+				var:global.pwo_hosttool_curr_country = {
+					set_state_controller = PREV
+				}
+				UNP = {news_event = pwo_host_events.17}
+			}
+
+			pwo_hosttool_state_annex_button_click = {
+				this.controller = {
+					var:global.pwo_hosttool_curr_country = {
+						annex_country = {
+							target = PREV
+							transfer_troops = yes
+						}
+					}
+				}
+				UNP = {news_event = pwo_host_events.18}
+			}
+
+
+
+			pwo_hosttool_resources_left_button_click = {
+				subtract_from_variable = { global.pwo_hosttool_resource_type = 1}
+				ingame_update_setup = yes
+				if = {
+					limit = {
+						check_variable = {global.pwo_hosttool_resource_type < 1}
+					}
+					set_variable = { global.pwo_hosttool_resource_type = 7}
+				}
+			}
+
+			pwo_hosttool_resources_right_button_click = {
+				add_to_variable = { global.pwo_hosttool_resource_type = 1}
+				ingame_update_setup = yes
+				if = {
+					limit = {
+						check_variable = {global.pwo_hosttool_resource_type > 7}
+					}
+					set_variable = { global.pwo_hosttool_resource_type = 1}
+				}
+			}
+
+			pwo_hosttool_resources_sub1_button_click = {
+				add_to_variable = { global.pwo_hosttool_resources_amt = -1}
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_resources_sub5_button_click = {
+				add_to_variable = { global.pwo_hosttool_resources_amt = -5}
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_resources_sub10_button_click = {
+				add_to_variable = { global.pwo_hosttool_resources_amt = -10}
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_resources_add1_button_click = {
+				add_to_variable = { global.pwo_hosttool_resources_amt = 1}
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_resources_add5_button_click = {
+				add_to_variable = { global.pwo_hosttool_resources_amt = 5}
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_resources_add10_button_click = {
+				add_to_variable = { global.pwo_hosttool_resources_amt = 10}
+				ingame_update_setup = yes
+			}
+
+			pwo_hosttool_give_resources_button_click = {
+				THIS = {
+					if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 1}
+						}
+						add_resource = {
+							type = oil
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 2}
+						}
+						add_resource = {
+							type = aluminium
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 3}
+						}
+						add_resource = {
+							type = rubber
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 4}
+						}
+						add_resource = {
+							type = tungsten
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 5}
+						}
+						add_resource = {
+							type = steel
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 6}
+						}
+						add_resource = {
+							type = chromium
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+					else_if = {
+						limit = {
+							check_variable = { global.pwo_hosttool_resource_type = 7}
+						}
+						add_resource = {
+							type = coal
+							amount = var:global.pwo_hosttool_resources_amt
+						}
+					}
+				}
+				UNP = { news_event = pwo_host_events.19 }
+
+			}
+
+		}
+
+
+	}
+
+	
+
+
+}

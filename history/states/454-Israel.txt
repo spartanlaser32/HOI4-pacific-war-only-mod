@@ -8,8 +8,8 @@ state = {
 	history = {
 
 		owner = UNP
-		add_core_of = PAL
-		add_core_of = ISR
+		
+		
 
 		buildings = {
 			infrastructure = 3 #was: 5

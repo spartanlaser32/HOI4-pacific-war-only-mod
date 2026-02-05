@@ -289,6 +289,7 @@ calculator_fleet_size = {
 	set_variable = { carrier_have_count_calculator = 0 }
 	set_variable = { heavy_count_calculator = 0 }
 	set_variable = { needed_heavy_count_calculator = 0 }
+	set_variable = { fleet_cap_calculator = skill_level_calculator }
 
 	add_to_variable = { number_of_ships_calculator = destroyer_count_calculator }
 	add_to_variable = { number_of_ships_calculator = light_cruiser_count_calculator }
@@ -315,7 +316,21 @@ calculator_fleet_size = {
 	add_to_variable = { heavy_count_calculator = shbb_count_calculator }
 
 	add_to_variable = { needed_screen_count_calculator = capital_count_calculator }
-	multiply_variable = { needed_screen_count_calculator = 3 }
+	
+	if = {
+		limit = { has_country_flag = fleet_protector_button_enabled }
+		multiply_variable = { 
+			var = needed_screen_count_calculator
+			value = 2.5
+		}
+	}
+	else = {
+		multiply_variable = { 
+			var = needed_screen_count_calculator
+			value = 3
+		}
+	}
+	#multiply_variable = { needed_screen_count_calculator = 3 }
 
 
 	add_to_variable = { needed_heavy_count_calculator = carrier_have_count_calculator }
@@ -360,6 +375,9 @@ calculator_fleet_size = {
 
 
 	set_temp_variable = { carrier_limit_calculator_used_temp = 0 }
+
+	multiply_variable = { fleet_cap_calculator = 5 }
+	add_to_variable = { fleet_cap_calculator = 75 }
 
 
 

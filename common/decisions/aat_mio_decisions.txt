@@ -1,0 +1,773 @@
+foreign_mio_decisions_category = {
+	# German MIOs
+	# Tanks
+
+
+
+	# British MIOs 
+	# Tanks
+	invite_ENG_vickers_armstrong_eng_organization = {
+
+		icon = generic_tank
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE_IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_vickers_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_vickers_armstrong_eng_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_tank_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_tank_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Ships
+	invite_ENG_yarrow_shipbuilders_organization = {
+
+		icon = generic_naval
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+			}
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					has_completed_focus = BUL_contract_foreign_companies
+					has_completed_focus = BUL_a_black_sea_fleet
+				}
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				has_completed_focus = BUL_a_black_sea_fleet
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_yarrow_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_yarrow_shipbuilders_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_naval_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_naval_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	invite_ENG_john_brown_organization = {
+
+		icon = generic_naval
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					has_completed_focus = BUL_contract_foreign_companies
+					has_completed_focus = BUL_a_black_sea_fleet
+				}
+			}
+			ELSE_IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				has_completed_focus = BUL_a_black_sea_fleet
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_ENG_john_brown_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_john_brown_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_naval_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_coastal = yes 
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = dockyard
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_naval_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+	# Planes 
+	invite_ENG_fairey_aviation_organization = {
+
+		icon = generic_air
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { ENG }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = BUL
+					has_dlc = "Battle for the Bosporus"
+				}
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			ENG = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = BUL }
+				has_completed_focus = BUL_contract_foreign_companies
+			}
+			ELSE_IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			ENG = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+
+			IF = {
+				limit = { original_tag = BUL }
+				OR = {
+					is_subject = no
+					is_subject_of = ENG
+				}
+				#is_in_faction_with = ENG
+				NOT = { has_completed_focus = BUL_nationalization }
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_fairey_aviation_mio_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = ENG_fairey_aviation_organization
+			
+			### Bulgaria specific
+			if = {
+				limit = {
+					original_tag = BUL 
+					NOT = { has_country_flag = contract_with_british_aircraft_designer_flag }
+				}
+				random_owned_state = {
+					limit = {
+						is_fully_controlled_by = ROOT
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				set_country_flag = contract_with_british_aircraft_designer_flag
+			}		
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				ENG = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				ENG = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	#### French MIOs 
+	# Tanks
+	invite_FRA_renault_organization = {
+
+		icon = generic_tank
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { FRA }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			FRA = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			FRA = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_FRA_renault_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = FRA_renault_organization
+			
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				FRA = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				FRA = { is_in_faction_with = ROOT }
+			}
+		}
+	} 
+
+	# Planes
+	invite_FRA_bloch_organization = {
+
+		icon = generic_air
+
+		cost = 50
+
+		fire_only_once = yes 
+		
+		targets = { FRA }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				} 
+			}
+		}
+
+		visible = {
+			FRA = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			FRA = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_FRA_bloch_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = FRA_bloch_organization
+			
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				FRA = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				FRA = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Materiel
+	invite_FRA_mas_organization = {
+
+		icon = generic_prepare_civil_war
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { FRA }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			FRA = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			FRA = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_FRA_mas_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = FRA_mas_organization
+			
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				FRA = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				FRA = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Japanese MIOs
+	# Ships
+	invite_JAP_maizuru_naval_arsenal_organization = {
+
+		icon = generic_naval
+
+		cost = 50
+
+		fire_only_once = yes
+		
+		targets = { JAP }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			JAP = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			JAP = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_JAP_maizuru_naval_arsenal_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = JAP_maizuru_naval_arsenal_organization
+			
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				JAP = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				JAP = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+	# Planes
+	invite_JAP_mitsubishi_organization = {
+
+		icon = generic_air
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { JAP }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				} 
+			}
+		}
+
+		visible = {
+			JAP = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			JAP = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_JAP_mitsubishi_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = JAP_mitsubishi_organization
+			
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				JAP = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				JAP = { is_in_faction_with = ROOT }
+			}
+		}
+	}
+
+	# Materiel
+	invite_JAP_nissan_organization = {
+
+		icon = generic_motorized
+
+		cost = 50
+
+		fire_only_once = yes 
+
+		targets = { JAP }
+		
+		allowed = {
+			OR = {
+				AND = {
+					tag = ETH 
+					has_dlc = "By Blood Alone"
+				}
+			}
+		}
+
+		visible = {
+			JAP = {
+				mio_original_country_exists_and_not_at_war_with_ROOT = yes
+			}
+			IF = {
+				limit = { original_tag = ETH }
+				has_completed_focus = ETH_invite_foreign_industrialists
+			}
+			ELSE = {
+				always = no 
+			}
+		}
+
+		available = {
+			JAP = {
+				mio_original_country_available_with_opinion_subject_and_war_requirements_fulfilled = yes
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = { set_country_flag = has_invited_JAP_nissan_organization_flag }
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = JAP_nissan_organization
+			
+		}
+		
+		ai_will_do = {
+			base = 10
+			modifier = {
+				factor = 5
+				JAP = { has_government = ROOT }
+			}
+			modifier = {
+				factor = 5
+				JAP = { is_in_faction_with = ROOT }
+			}
+		}	
+	}
+
+# Swedish MIOs
+	# Tanks
+
+}
+
+
+# generic_naval
+# generic_air

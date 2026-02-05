@@ -9,7 +9,7 @@ state = {
 	history = {
 
 		owner = UNP
-		add_core_of = BOL
+		
 
 		buildings = {
 			infrastructure = 1

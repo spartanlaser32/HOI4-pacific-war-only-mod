@@ -13,7 +13,7 @@ state = {
 	history = {
 
 		owner = UNP
-		add_core_of = GER
+		
 		add_core_of = BAY
 
 		victory_points = {

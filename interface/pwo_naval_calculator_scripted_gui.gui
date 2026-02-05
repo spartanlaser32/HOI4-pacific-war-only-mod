@@ -63,6 +63,109 @@ guiTypes = {
 			pdx_tooltip = "CLOSE"
 		}
 
+		containerWindowType = {
+			name = skill_level
+			position = { x = 25 y = 80 }
+
+			instantTextBoxType = {
+				name = "skill_level_title"
+				position = { x = 0 y = 0 }
+				font = "hoi_18mbs"
+				format = center
+				maxWidth = 80
+				maxHeight = 24
+				fixedsize = yes
+				text = "SKILL_LEVEL_TITLE"
+			}
+
+			instantTextBoxType = {
+				name = "skill_level_value"
+				position = { x = -15 y = 15 }
+				font = "hoi_18mbs"
+				format = center
+				maxWidth = 80
+				maxHeight = 24
+				fixedsize = yes
+				text = "[?skill_level_calculator]"
+			}
+
+			containerWindowType = {
+					name = "increase_skill_level"
+					position = { x = 50 y = 5 }
+
+					buttonType = {
+						name = "increase_skill_level_button"
+						spriteType = "GFX_small_plus_button"
+						position = { x = 0 y = 0 }
+					}
+
+					instantTextBoxType = {
+						name = "increase_skill_level_tooltip"
+						position = { x = 0 y = 0 }
+						font = "hoi_18mbs"
+						format = left
+						maxWidth = 24
+						maxHeight = 24
+						fixedsize = yes
+						pdx_tooltip = "increases_skill_level_tooltip"
+						pdx_tooltip_delayed = "increases_skill_level_delayed_tooltip"
+					}
+				}
+				containerWindowType = {
+					name = "decrease_skill_level"
+					position = { x = 50 y = 20 }
+
+					buttonType = {
+						name = "decrease_skill_level_button"
+						spriteType = "GFX_small_minus_button"
+						position = { x = 0 y = 0 }
+					}
+
+					instantTextBoxType = {
+						name = "decrease_skill_level_tooltip"
+						position = { x = 0 y = 0 }
+						font = "hoi_18mbs"
+						format = left
+						maxWidth = 24
+						maxHeight = 24
+						fixedsize = yes
+						pdx_tooltip = "decreases_skill_level_tooltip"
+						pdx_tooltip_delayed = "decreases_skill_level_delayed_tooltip"
+					}
+				}
+
+
+		}
+
+		###PWO ADDITION BUTTON
+		
+
+		containerWindowType = {
+			name = "fleet_protector_button"
+			position = { x = 100 y = 85 }
+
+			buttonType = {
+				name = "fleet_protector_button"
+				position = { x = 0 y = 0 }
+				buttonText = "FLEET_PROTECTOR_BUTTON"
+				spriteType = "GFX_fleet_protector_button"
+				frame = 0
+
+			}
+
+			instantTextBoxType = {
+				name = "fleet_protector_button_tooltip"
+				position = { x = 0 y = 0 }
+				font = "hoi_18mbs"
+				format = left
+				maxWidth = 24
+				maxHeight = 24
+				fixedsize = yes
+				pdx_tooltip = "fleet_protector_button_tooltip"
+				pdx_tooltip_delayed = "fleet_protector_button_delayed_tooltip"
+			}
+		}
+
 		# Calculator Title
 		instantTextBoxType = {
 			name = "naval_calculator_TITILE"

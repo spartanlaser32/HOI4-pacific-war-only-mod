@@ -12,7 +12,7 @@ state = {
 	history = {
 
 		owner = UNP
-		add_core_of = ARG
+		
 		add_claim_by = CHL
 		add_core_of = WLA
 

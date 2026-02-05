@@ -9,8 +9,8 @@ state = {
 
 	history = {
 
-		#owner = UNP
-		add_core_of = SAU
+		owner = UNP
+		
 
 		victory_points = {
 			12702 1 

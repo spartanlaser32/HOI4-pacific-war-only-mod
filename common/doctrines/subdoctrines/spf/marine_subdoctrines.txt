@@ -2,7 +2,7 @@ naval_support = {
     track = marine
     name = SUBDOCTRINE_NAVAL_SUPPORT
     description = SUBDOCTRINE_NAVAL_SUPPORT_DESC
-    icon = GFX_doctrine_mobile_infantry_medium
+    icon = GFX_doctrine_floating_airfield_medium
 
     xp_cost = 100
     xp_type = navy
@@ -28,21 +28,21 @@ naval_support = {
                 #breakthroug
            # }
         }
-        combined_arms_planning = {
-            invasion_preparation = 0.5
+        extensive_planning = {
+            invasion_preparation = -0.5
             naval_invasion_planning_bonus_speed = 0.5
         }
-        decisive_operations = {
+        delicate_executions = {
             amphibious_invasion = 0.5
 			amphibious_invasion_defence = 0.5
         }
-        delegated_authority = {
+        naval_air_supremacy = {
             category_carrier_fighter = {
                 air_attack = 0.1
                 air_agility = 0.1
             }
         }
-        maneuver_warfare = {
+        naval_air_support = {
             category_carrier_cas = {
                 ground_attack = 0.2
                 air_agility = 0.1
@@ -69,7 +69,7 @@ marine_left_side = {
         base = 1
     
     }
-    marines_special_forces_contribution_factor = -0.25
+    #marines_special_forces_contribution_factor = -0.25
     naval_invasion_division_cap = 2
     category_special_forces = {
         max_organisation = 5
@@ -240,5 +240,195 @@ marine_right_side = {
             naval_invasion_prep_days = -5
             naval_invasion_plan_cap = 1
         }
+    }
+}
+
+coastal_defense = {
+    track = marine
+    name = SUBDOCTRINE_COASTAL_DEFENSE
+    description = SUBDOCTRINE_COASTAL_DEFENSE_DESC
+    icon = GFX_doctrine_antitank_frontline_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+
+    enable_subunits = {
+        pioneer_support
+    }
+
+    category_marines = {
+        max_speed = -0.25
+    }
+
+
+    rewards = {
+        beach_trenches = {
+           category_marines = {
+              entrenchment = 0.3
+           }
+        }
+        deny_the_skies = {
+            pioneer_support = {
+                battalion_mult = {
+                    category = category_anti_air
+                    air_attack = 0.2
+                }
+            }
+        }
+        living_off_the_land = {
+            category_marines = {
+                supply_consumption = -0.1
+            }
+        }
+        living_off_the_enemy = {
+            category_marines = {
+                equipment_capture = 0.05
+            }
+        }
+        well_defended = {
+            category_marines = {
+                defence = 0.25
+            }
+        }
+
+    }
+}
+
+armored_breakthrough = {
+    track = marine
+    name = SUBDOCTRINE_ARMORED_BREAKTHROUGH
+    description = SUBDOCTRINE_ARMORED_BREAKTHROUGH_DESC
+    icon = GFX_doctrine_armored_spearhead
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+
+    enable_subunits = {
+        pioneer_support
+    }
+
+
+
+    rewards = {
+        first_on_the_beach = {
+           category_amphibious_tanks = {
+              initiative = 0.3
+              max_organisation = 2
+           }
+        }
+        reliable_engineering = {
+            category_amphibious_tanks = {
+                armor = 0.15
+                reliability = 0.1
+            }
+        }
+        explosive_entry = {
+            category_amphibious_tanks = {
+                soft_attack = 0.1
+                hard_attack = 0.05
+                breakthrough = 0.1
+            }
+        }
+        coordinated_attacks = {
+            category_amphibious_tanks = {
+                recon = 1
+            }
+        }
+        supportive_backline = {
+            category_marines = {
+                max_organisation = 10
+                default_morale = 0.2
+            }
+            amphibious_mechanized = {
+                max_organisation = 10
+                default_morale = 0.2
+            }
+        }
+
+    }
+}
+
+armored_wave = {
+    track = marine
+    name = SUBDOCTRINE_ARMORED_WAVE
+    description = SUBDOCTRINE_ARMORED_WAVE_DESC
+    icon = GFX_doctrine_armored_calvary_medium
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    
+    }
+
+    # EFFECTS
+   # enable_tactic = tactic_overwhelming_fire
+
+    enable_subunits = {
+        pioneer_support
+    }
+
+
+
+    rewards = {
+        first_on_the_beach = {
+           amphibious_mechanized = {
+              armor = 0.05
+              hardness = 0.05
+           }
+        }
+        dual_purpose = {
+            amphibious_mechanized = {
+                max_speed = 0.2
+            }
+        }
+        additional_guns = {
+            amphibious_mechanized = {
+                soft_attack = 0.1
+                breakthrough = 0.1
+            }
+        }
+        coordinated_attacks = {
+            amphibious_mechanized = {
+                hard_attack = 0.5
+                ap_attack = 0.2
+            }
+        }
+        supportive_backline = {
+            amphibious_mechanized = {
+                max_organisation = 10
+                default_morale = 0.2
+            }
+        }
+
     }
 }

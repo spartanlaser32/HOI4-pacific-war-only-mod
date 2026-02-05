@@ -1,0 +1,363 @@
+guiTypes = {
+	containerWindowType = {
+		name = "pwo_hosttool_open_button_container"
+		position = { x = 1000 y = 0 }
+
+		buttonType = {
+			name = "pwo_hosttool_open_button"
+			spriteType = "GFX_button_123x34"
+			#frame 
+			position = { x = 0 y = 0 }
+			buttonText = "Host Tool"
+			buttonFont = "hoi_16mbs"
+
+		}
+
+
+	}
+
+	
+
+	containerWindowType = {
+		name = "pwo_hosttool_tab"
+		position = { x = -400 y = -400 }
+		clipping = no
+		orientation = center
+		origo = center
+		moveable = yes
+
+		background = {
+			name = "Background"
+			#spriteType = "GFX_imperial_influence_decor_bg"
+			spriteType = "GFX_hosttool_frame"
+		}
+
+		#iconType = {
+		#	name = x
+		#	spriteType = "GFX_army_insignia_selection_bg"
+		#	position = {x = 344 y = 0}
+		#}
+
+		buttonType = {
+			name = "pwo_hosttool_host_button"
+			spriteType = "GFX_button_123x34"
+			position = { x=165 y = 70}
+			buttonText = "Change Host"
+			buttonFont = "hoi_16mbs"
+		}
+
+		containerWindowType = {
+			name = "pwo_hosttool_mils"
+			position = { x = 200 y = 100 }
+
+			buttonType = {
+				name = "pwo_hosttool_mils_sub1_button"
+				spriteType = "GFX_subtract_one"
+				position = { x = -22 y = 0 }
+			}
+			buttonType = {
+				name = "pwo_hosttool_mils_sub5_button"
+				spriteType = "GFX_subtract_5"
+				position = { x = -22 y = 22 }
+			}
+
+			iconType = {
+				name = "pwo_hosttool_mils_icon"
+				spriteType = "GFX_buildings_strip"
+				frame = 2
+				position = { x = 0 y = 0 }
+
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_mils_add1_button"
+				spriteType = "GFX_add_one"
+				position = { x = 44 y = 0 }
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_mils_add5_button"
+				spriteType = "GFX_add_5"
+				position = { x = 44 y = 22 }
+			}
+		}
+		containerWindowType = {
+			name = "pwo_hosttool_civs"
+			position = { x = 200 y = 150 }
+
+			buttonType = {
+				name = "pwo_hosttool_civs_sub1_button"
+				spriteType = "GFX_subtract_one"
+				position = { x = -22 y = 0 }
+			}
+			buttonType = {
+				name = "pwo_hosttool_civs_sub5_button"
+				spriteType = "GFX_subtract_5"
+				position = { x = -22 y = 22 }
+			}
+
+			iconType = {
+				name = "pwo_hosttool_civs_icon"
+				spriteType = "GFX_buildings_strip"
+				frame = 1
+				position = { x = 0 y = 0 }
+
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_civs_add1_button"
+				spriteType = "GFX_add_one"
+				position = { x = 44 y = 0 }
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_civs_add5_button"
+				spriteType = "GFX_add_5"
+				position = { x = 44 y = 22 }
+			}
+		}
+
+		containerWindowType = {
+			name = "pwo_hosttool_docks"
+			position = { x = 200 y = 200 }
+
+			buttonType = {
+				name = "pwo_hosttool_docks_sub1_button"
+				spriteType = "GFX_subtract_one"
+				position = { x = -22 y = 0 }
+			}
+			buttonType = {
+				name = "pwo_hosttool_docks_sub5_button"
+				spriteType = "GFX_subtract_5"
+				position = { x = -22 y = 22 }
+			}
+
+			iconType = {
+				name = "pwo_hosttool_docks_icon"
+				spriteType = "GFX_buildings_strip"
+				frame = 4
+				position = { x = 0 y = 0 }
+
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_docks_add1_button"
+				spriteType = "GFX_add_one"
+				position = { x = 44 y = 0 }
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_docks_add5_button"
+				spriteType = "GFX_add_5"
+				position = { x = 44 y = 22 }
+			}
+		}
+
+
+		instantTextBoxType = {
+			name = "pwo_hosttool_curr_selected_country"
+			text = "Currently Selected Country: [?Global.pwo_hosttool_curr_country.GetFlag] [?Global.pwo_hosttool_curr_country.GetTag]"
+			position = { x = 175 y = 25 }
+		}
+
+		buttonType = {
+			name = "pwo_hosttool_close_button"
+			spriteType = "GFX_button_close"
+			position = { x = 627 y = 0 }
+		}
+
+
+
+		
+
+		containerWindowType = {
+			name = "pwo_hosttool_country_list_container"
+			Orientation = upper_left
+			size = {width=150 height=700}
+			position = {x=20 y=20}
+			#verticalScrollbar = "right_vertical_slider_intel"
+			#scroll_wheel_factor = 40
+			#smooth_scrolling = yes
+					
+			background = {
+                name = "Background"
+                quadTextureSprite ="GFX_tiled_window_transparent"
+            }
+			
+			gridBoxType = {
+				name = "pwo_hosttool_country_list"
+				position = { x = 0 y = 0}
+				#The size of the gridbox
+				size = { width = 100%% height = 100%% }
+				Orientation = upper_left
+				#The slot size
+				slotsize = {width=150 height=30 }
+				format = "UPPER_LEFT"
+				#the maximum horizontal gui elements
+				max_slots_horizontal = 1
+				#the maximum vertical gui elements
+				#max_slots_vertical = 1
+			}
+		}	
+
+
+	}
+
+	containerWindowType = {
+		name = "pwo_hosttool_country_button_container"
+		size = {width=150 height=30}
+			
+		buttonType = {
+			name = "pwo_hosttool_country_button"
+			quadTextureSprite ="GFX_strategic_air_sort"
+			position = { x=0 y=0 }
+			#This will write onto the button the value and index of the array
+			buttonText = "[?THIS.GetFlag] [?THIS.GetTag]"
+			buttonFont = "hoi_18mbs"
+		}
+
+		#instantTextBoxType = {
+		#	name = "pwo_hosttool_country_button_text"
+		#	text = "[?THIS.GetFlag] [?THIS.GetTag]"
+		#	font = "hoi_16mbs"
+		#	position = { x=20 y=0}
+		#}
+
+	}
+
+
+	containerWindowType = {
+		name = "pwo_hosttool_state_tab"
+		position = { x=344 y=30 }
+		origo = upper_left
+		orientation = upper_left
+		clipping = no
+		background = {
+			name = "pwo_hosttool_state_bg"
+			spriteType = "GFX_army_insignia_selection_bg"
+		}
+
+
+
+		instantTextBoxType = {
+			name = "pwo_hosttool_curr_selected_state"
+			text = "Currently Selected State: [?THIS.GetName] ([?THIS.controller.GetTag])"
+			position = { x = 100 y = 50 }
+		}
+
+		buttonType = {
+			name = "pwo_hosttool_state_transfer_button"
+			spriteType = "GFX_button_123x34"
+			position = { x=10 y = 100}
+			buttonText = "Transfer State"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "pwo_hosttool_state_core_button"
+			spriteType = "GFX_button_123x34"
+			position = { x=10 y = 130}
+			buttonText = "Core State"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "pwo_hosttool_state_owner_button"
+			spriteType = "GFX_button_123x34"
+			position = { x=10 y = 160}
+			buttonText = "Set Owner"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "pwo_hosttool_state_controller_button"
+			spriteType = "GFX_button_123x34"
+			position = { x=10 y = 190}
+			buttonText = "Set Controller"
+			buttonFont = "hoi_16mbs"
+		}
+		buttonType = {
+			name = "pwo_hosttool_state_annex_button"
+			spriteType = "GFX_button_123x34"
+			position = { x=10 y = 220}
+			buttonText = "Annex Country"
+			buttonFont = "hoi_16mbs"
+		}
+
+
+		containerWindowType = {
+			name = "pwo_hosttool_resources_container"
+			position = { x = 200 y = 100 }
+
+			iconType = {
+				name = "pwo_hosttool_resources"
+				spriteType = "GFX_resources_strip"
+				frame = 4
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_left_button"
+				spriteType = "button_left"
+				position = { x=-30 y = 3}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_right_button"
+				spriteType = "button_right"
+				position = { x=35 y = 3}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_sub1_button"
+				spriteType = "GFX_subtract_one"
+				position = { x=-30 y = 30}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_sub5_button"
+				spriteType = "GFX_subtract_5"
+				position = { x=-30 y = 55}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_sub10_button"
+				spriteType = "GFX_subtract_10"
+				position = { x=-30 y = 80}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_add1_button"
+				spriteType = "GFX_add_one"
+				position = { x=30 y = 30}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_add5_button"
+				spriteType = "GFX_add_5"
+				position = { x=30 y = 55}
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_resources_add10_button"
+				spriteType = "GFX_add_10"
+				position = { x=30 y = 80}
+			}
+
+			instantTextBoxType = {
+				name = "pwo_hosttool_resources_amt"
+				text = "[?global.pwo_hosttool_resources_amt]"
+				position = { x = 0 y = 50}
+				font = "hoi_16mbs"
+			}
+
+			buttonType = {
+				name = "pwo_hosttool_give_resources_button"
+				spriteType = "GFX_button_123x34"
+				position = {x = -45 y = 110}
+				buttonText = "Add Resources"
+				buttonFont = "hoi_16mbs"
+			}
+		}
+
+
+	}
+}

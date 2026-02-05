@@ -19,4 +19,11 @@ spriteTypes = {
 		name = "GFX_calculator_entry_bg"
 		textureFile = "gfx//interface//calculator_entry_bg.dds"
 	}
+	spriteType = {
+		name = "GFX_fleet_protector_button"
+		textureFile = "gfx//interface//trait_admiral_screening_master.dds"
+		noOfFrames = 2
+	}
+
+	
 }

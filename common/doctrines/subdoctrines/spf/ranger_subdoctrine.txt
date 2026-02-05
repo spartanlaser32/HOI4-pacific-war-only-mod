@@ -1,7 +1,7 @@
 
-rangers_left_side = {
+ranger_left_side = {
     track = ranger
-    name = SUBDOCTRINE_RANGERS_LEFT_SIDE
+    name = SUBDOCTRINE_RANGER_LEFT_SIDE
     description = SUBDOCTRINE_FOREST_AMBUSH_DESC
     icon = GFX_doctrine_mobile_infantry_medium
 
@@ -87,9 +87,9 @@ rangers_left_side = {
     }
 }
 
-rangers_right_side = {
+ranger_right_side = {
     track = ranger
-    name = SUBDOCTRINE_RANGERS_RIGHT_SIDE
+    name = SUBDOCTRINE_RANGER_RIGHT_SIDE
     description = SUBDOCTRINE_FOREST_AMBUSH_DESC
     icon = GFX_doctrine_mobile_infantry_medium
 
@@ -170,6 +170,92 @@ rangers_right_side = {
             special_forces_no_supply_grace = 24
             special_forces_training_time_factor = -0.1 
             special_forces_attack_factor = 0.1
+        }
+
+    }
+}
+
+helicopter_support = {
+    track = ranger
+    name = SUBDOCTRINE_HELICOPTER_SUPPORT
+    description = SUBDOCTRINE_HELICOPTER_SUPPORT_DESC
+    icon = GFX_doctrine_air_calvary_medium
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+ 
+    enable_subunits = {
+        rangers_support
+    }	
+
+    # EFFECTS
+    enable_tactic = ambush
+    effect = {
+        add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = helicopter_tech
+            name = SUBDOCTRINE_HELICOPTER_SUPPORT
+        }
+    }
+
+
+    rewards = {
+        airborne_observers = { 
+            helicopter_recon = {
+                battalion_mult = {
+                    category = category_rangers
+                    soft_attack = 0.1
+                }
+                max_organisation = 10
+            }
+        }
+        service_and_support = {
+            category_helicopter_support_companies = {
+                max_strength = 0.03
+            }
+        }
+        rescue_liasions = {
+            helicopter_field_hospital = {
+                battalion_mult = {
+                    category = category_rangers
+                    max_strength = 0.05 
+                    default_morale = 0.05 
+                }
+                max_organisation = 5
+                casualty_trickleback = 0.05
+            }
+        }
+
+        transport_assault = {
+            helicopter_transport = {
+                battalion_mult = {
+                    category = category_rangers
+                    maximum_speed = 0.2
+                    breakthrough = 0.05
+                }
+                breakthrough = 0.05
+                max_organisation = 10
+            }
+                
+        }
+        intervention_units = {
+            helicopter_brigade = {
+                battalion_mult = {
+                    category = category_rangers
+                    soft_attack = 0.1
+                }
+                max_organisation = 10
+                
+            }
         }
 
     }
